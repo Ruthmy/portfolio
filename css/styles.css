@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 /* Header styles */
@@ -40,7 +40,7 @@
   width: 114px;
   height: 48px;
   left: 12px;
-  top: calc(50% - 48px/2);
+  top: calc(50% - 48px / 2);
 }
 
 #hamburger {
@@ -51,5 +51,5 @@
   width: 40px;
   height: 40px;
   right: 24px;
-  top: calc(50% - 40px/2);
+  top: calc(50% - 40px / 2);
 }
