@@ -296,4 +296,87 @@ div .action {
   background-color: #008552;
 }
 
+/* About me styles */
+
+#about-me {
+  padding: 60px 12px;
+}
+
+.about-me__text {
+  background-image: url(..images/top.svg), url(..images/bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right top, left bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 22px;
+  padding-bottom: 50px;
+}
+
+.about-me__primary-text {
+  font-weight: 700;
+  line-height: 52px;
+  font-size: 40px;
+  color: #172b4d;
+}
+
+.about-me__supporting-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
+}
+
+.about-me__cards {
+  display: grid;
+  row-gap: 24px;
+}
+
+.about-me__works {
+  height: 350px;
+  background-color: #ebf0ee;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-me__icon {
+  background-color: white;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.about-me__languages {
+  margin-top: -80px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #344563;
+}
+
+.about-me__tags {
+  list-style: none;
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 12px;
+}
+
+.about-me__tag {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #36b37e;
+  background-color: white;
+  padding: 12px 12px;
+  border-radius: 8px;
+  
+}
+
 
