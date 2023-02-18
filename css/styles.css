@@ -169,6 +169,7 @@ div .action {
   align-items: center;
   text-align: center;
 }
+
 /* Here is the grid division */
 
 .recent-works__cards {
@@ -190,16 +191,16 @@ div .action {
   padding: 60px 0;
 }
 
-.recent-works__img{
+.recent-works__img {
   width: 327px;
   height: 474px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   border-radius: 8px;
   border: 1px solid #d0d9d4;
-  background: #EBF0EE;
+  background: #Ebf0ee;
 }
 
 .recent-works__info {
@@ -213,8 +214,8 @@ div .action {
   position: absolute;
   width: 325px;
   height: 222px;
-  left: calc(50% - 327px/2);
-  bottom: 0px;
+  left: calc(50% - 327px / 2);
+  bottom: 0;
   border-radius: 8px;
   transform: translateY(-18%);
 }
@@ -226,7 +227,7 @@ div .action {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   align-items: center;
   flex: none;
@@ -239,11 +240,11 @@ div .action {
   flex-direction: row;
   align-items: center;
   list-style: none;
-  padding: 0px;
+  padding: 0;
   gap: 8px;
   flex: none;
   order: 1;
-  flex-grow: 0;  
+  flex-grow: 0;
 }
 
 .recent-works__tag {
@@ -251,13 +252,14 @@ div .action {
   flex-direction: row;
   align-items: center;
   padding: 8px 12px;
-  background: #Ebf0ee;
+  background: #ebf0ee;
   border-radius: 4px;
   height: 32px;
   flex: none;
   order: 2;
   flex-grow: 0;
-  /* text style */
+
+  /* text style */  
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -274,13 +276,14 @@ div .action {
   position: absolute;
   width: 122px;
   height: 48px;
-  left: calc(50% - 122px/2 + 0.5px);
+  left: calc(50% - 122px / 2 + 0.5px);
   bottom: 24px;
   background-color: #36b37f;
   border-radius: 4px;
   flex: none;
   order: 0;
   flex-grow: 0;
+  
   /* font style */
   font-weight: 500;
   font-size: 17px;
