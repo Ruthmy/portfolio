@@ -209,15 +209,14 @@ div .action {
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  margin-left: 1px;
+  margin-left: 1,5px;
   gap: 16px;
-  position: absolute;
   width: 325px;
   height: 222px;
   left: calc(50% - 327px / 2);
   bottom: 0;
   border-radius: 8px;
-  transform: translateY(-18%);
+  transform: translateY(103.5%);
 }
 
 .recent-works__title {
@@ -271,7 +270,6 @@ div .action {
   align-items: center;
   padding: 10px;
   gap: 10px;
-  position: absolute;
   width: 122px;
   height: 48px;
   left: calc(50% - 122px / 2 + 0.5px);
@@ -288,3 +286,14 @@ div .action {
   text-decoration: none;
   color: #fff;
 }
+
+.recent-works__link:hover {
+  color: #ebf0ee;
+}
+
+.recent-works__link:active {
+  color: #fff;
+  background-color: #008552;
+}
+
+
