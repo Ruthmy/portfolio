@@ -200,7 +200,7 @@ div .action {
   bottom: 0;
   border-radius: 8px;
   border: 1px solid #d0d9d4;
-  background: #Ebf0ee;
+  background: #ebf0ee;
 }
 
 .recent-works__info {
@@ -257,10 +257,8 @@ div .action {
   height: 32px;
   flex: none;
   order: 2;
-  flex-grow: 0;
-
-  /* text style */  
-  font-style: normal;
+  flex-grow: 0;  
+  font-style: normal; /* text style */
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
@@ -283,9 +281,7 @@ div .action {
   flex: none;
   order: 0;
   flex-grow: 0;
-  
-  /* font style */
-  font-weight: 500;
+  font-weight: 500; /* font style */
   font-size: 17px;
   line-height: 24px;
   letter-spacing: 0.03em;
