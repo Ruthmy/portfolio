@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  background: #e5e5e5;
+}
+
+/* Media queries */
+@media (min-width: 375px) {
+  body {
+    width: 375px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 768px;
+  }
+}
+
+/* Header styles */
+.app-bar {
+  position: absolute;
+  width: 100%;
+  height: 92px;
+  left: 0;
+  top: 0;
+}
+
+.toolbar {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  left: 0;
+  right: 0;
+  top: 44px;
+  bottom: 0;
+  padding: 54px 32px 0 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container div {
+  display: flex;
+  flex-direction: row;
+}
+
+#logo {
+  align-items: center;
+  padding: 10px 12px;
+  width: 114px;
+  height: 48px;
+  left: 12px;
+  top: calc(50% - 48px / 2);
+}
+
+#logo:hover {
+  color: #36b37e;
+}
+
+#hamburger {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  top: calc(50% - 40px / 2);
+}
+
+/* Headline styles */
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px 64px 24px;
+  background-image: url(../images/mobile-background.svg);
+  background-repeat: no-repeat;
+  gap: 58px;
+  position: absolute;
+  width: 375px;
+  height: 726px;
+  left: 0;
+  top: 92px;
+}
+
+h1,
+h2 {
+  color: #172b4d;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#i-am:hover {
+  color: #36b37e;
+}
+
+#i-am-a {
+  color: #36b37e;
+}
+
+#i-am-a:hover {
+  color: #172b4d;
+}
+
+.supporting-text {
+  color: #172b4d;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+section .social {
+  padding: 0 100px 0 100px;
+  height: 20px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+section .social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+section .social-icons .social-icon {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0 10px 0 10px;
+  width: 100%;
+  height: 100%;
+}
+
+div .action {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.action img {
+  width: 100%;
+  margin-top: 20px;
+}
