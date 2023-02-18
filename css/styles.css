@@ -53,7 +53,7 @@
   width: 114px;
   height: 48px;
   left: 12px;
-  top: calc(50% - 48px / 2);  
+  top: calc(50% - 48px / 2);
 }
 
 #logo:hover {
@@ -126,7 +126,7 @@ section .social {
 
 section .social-icons {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   list-style: none;
 }
 
