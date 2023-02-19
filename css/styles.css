@@ -267,7 +267,8 @@ div .action {
 .recent-works__link {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center;  
+  position: absolute;
   padding: 10px;
   gap: 10px;
   width: 122px;
@@ -299,11 +300,11 @@ div .action {
 /* About me styles */
 
 #about-me {
-  padding: 60px 12px;
+  padding: 4000px 12px 0 12px;
 }
 
 .about-me__text {
-  background-image: url(..images/top.svg), url(..images/bottom.svg);
+  background-image: url(../images/top.svg), url(../images/bottom.svg);
   background-repeat: no-repeat;
   background-position: right top, left bottom;
   display: flex;
@@ -379,4 +380,13 @@ div .action {
   
 }
 
-
+.about-me__link {
+  background-color: #36b37f;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
