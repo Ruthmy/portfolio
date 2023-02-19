@@ -306,7 +306,7 @@ div .action {
 .about-me__text {
   background-image: url(../images/top.svg), url(../images/bottom.svg);
   background-repeat: no-repeat;
-  background-position: top 0 right -50px, bottom 0px left -50px;
+  background-position: top 0 right -50px, bottom 0 left -50px;
   display: flex;
   flex-direction: column;
   align-items: center;
