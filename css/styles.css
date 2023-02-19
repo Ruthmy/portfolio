@@ -209,7 +209,7 @@ div .action {
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  margin-left: 0px;
+  margin-left: 0;
   gap: 16px;
   width: 325px;
   height: 222px;
