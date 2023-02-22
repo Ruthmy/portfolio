@@ -446,15 +446,18 @@ div .action {
   padding: 12px;
 }
 
+/* Resizer styles */
+
+.contact-form__form textarea::-webkit-resizer {
+  background-image: url(../images/Union.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
 /* Placeholder text Styles */
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 .contact-form__form textarea::placeholder {
-  color: #091e42;
-}
-
-/* Internet Explorer 10-11 */
-.contact-form__form textarea:-ms-input-placeholder {
   color: #091e42;
 }
 
@@ -463,12 +466,9 @@ div .action {
   color: #091e42;
 }
 
-/* Resizer styles */
-
-.contact-form__form textarea::-webkit-resizer {
-  background-image: url(../images/Union.svg);
-  background-repeat: no-repeat;
-  background-position: bottom right;
+/* Internet Explorer 10-11 */
+.contact-form__form textarea:-ms-input-placeholder {
+  color: #091e42;
 }
 
 .contact-form__form button {
