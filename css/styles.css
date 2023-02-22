@@ -407,6 +407,10 @@ div .action {
 
 .contact-form__form {
   padding: 24px 24px 48px 24px;
+  background-image: url(../images/illustration-contact-form.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  
 }
 
 .contact-form__form input {
@@ -431,17 +435,39 @@ div .action {
 }
 
 .contact-form__form textarea {
-  color: #091e42;
+  background: transparent;
   border: 1px solid #60c095;
   border-radius: 4px;
   width: 327px;
   height: 114px;
   resize: vertical;
-  overflow: scroll;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   padding: 12px;
+}
+
+/* Placeholder text Styles */
+
+.contact-form__form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #091e42;
+  opacity: 1; /* Firefox */
+}
+
+.contact-form__form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #091e42;
+}
+
+.contact-form__form textarea::-ms-input-placeholder { /* Microsoft Edge */
+  color: #091e42;
+}
+
+/* Resizr styles */
+
+.contact-form__form textarea::-webkit-resizer{
+  background-image: url(../images/Union.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .contact-form__form button {
@@ -459,6 +485,16 @@ div .action {
   gap: 10px;
   margin-top: 24px;
 }
+
+.contact-form__form button:hover {
+  background: #36b37f;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.contact-form__form button:active {
+  background: #008552;
+}
+
 
 .contac-form__email {
   padding-top: 17px;
