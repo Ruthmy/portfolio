@@ -398,7 +398,7 @@ div .action {
   flex-direction: column;
   flex: none;
   order: 0;
-  flex-grow: 0;  
+  flex-grow: 0;
 }
 
 .contact-form__primary{
