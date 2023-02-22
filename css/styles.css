@@ -410,7 +410,6 @@ div .action {
   background-image: url(../images/illustration-contact-form.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
-  
 }
 
 .contact-form__form input {
@@ -449,22 +448,24 @@ div .action {
 
 /* Placeholder text Styles */
 
-.contact-form__form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #091e42;
-  opacity: 1; /* Firefox */
-}
-
-.contact-form__form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.contact-form__form textarea::placeholder {
   color: #091e42;
 }
 
-.contact-form__form textarea::-ms-input-placeholder { /* Microsoft Edge */
+/* Internet Explorer 10-11 */
+.contact-form__form textarea:-ms-input-placeholder {
   color: #091e42;
 }
 
-/* Resizr styles */
+/* Microsoft Edge */
+.contact-form__form textarea::-ms-input-placeholder {
+  color: #091e42;
+}
 
-.contact-form__form textarea::-webkit-resizer{
+/* Resizer styles */
+
+.contact-form__form textarea::-webkit-resizer {
   background-image: url(../images/Union.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -494,7 +495,6 @@ div .action {
 .contact-form__form button:active {
   background: #008552;
 }
-
 
 .contac-form__email {
   padding-top: 17px;
