@@ -80,7 +80,6 @@
   background-image: url(../images/mobile-background.svg);
   background-repeat: no-repeat;
   gap: 58px;
-  position: absolute;
   width: 375px;
   left: 0;
   top: 92px;
@@ -93,6 +92,14 @@ h2 {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
+}
+
+p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
 }
 
 #i-am:hover {
@@ -157,7 +164,6 @@ div .action {
   display: flex;
   flex-direction: column;
   width: 375px;
-  height: 726px;
   align-items: center;
   text-align: center;
   padding: 0 24px;
@@ -300,7 +306,7 @@ div .action {
 /* About me styles */
 
 #about-me {
-  padding: 4000px 12px 0 12px;
+  padding: 50px 12px;
 }
 
 .about-me__text {
@@ -322,16 +328,10 @@ div .action {
   color: #172b4d;
 }
 
-.about-me__supporting-text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: #42526e;
-}
-
 .about-me__cards {
   display: grid;
   row-gap: 24px;
+  padding-top: 50px;
 }
 
 .about-me__works {
@@ -389,4 +389,114 @@ div .action {
   padding: 12px;
   border-radius: 4px;
   text-decoration: none;
+}
+
+/* Contact Form Styles */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.contact-form__primary {
+  padding: 0 24px 64px 24px;
+}
+
+.contact-form__form {
+  padding: 24px 24px 48px 24px;
+  background-image: url(../images/illustration-contact-form.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.contact-form__form input {
+  margin-bottom: 24px;
+}
+
+.contact-form__input {
+  background: #fff;
+  border: 1px solid #d0d9d4;
+  padding: 0 16px;
+  border-radius: 4px;
+  width: 327px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+#name,
+#email {
+  border: 1px solid #d0d9d4;
+  height: 48px;
+}
+
+.contact-form__form textarea {
+  background: transparent;
+  border: 1px solid #60c095;
+  border-radius: 4px;
+  width: 327px;
+  height: 114px;
+  resize: vertical;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 12px;
+}
+
+/* Resizer styles */
+
+.contact-form__form textarea::-webkit-resizer {
+  background-image: url(../images/Union.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+/* Placeholder text Styles */
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.contact-form__form textarea::placeholder {
+  color: #091e42;
+}
+
+/* Microsoft Edge */
+.contact-form__form textarea::-ms-input-placeholder {
+  color: #091e42;
+}
+
+/* Internet Explorer 10-11 */
+.contact-form__form textarea:-ms-input-placeholder {
+  color: #091e42;
+}
+
+.contact-form__form button {
+  width: 129px;
+  height: 48px;
+  background-color: #36b37f;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  padding: 12px;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.contact-form__form button:hover {
+  background: #36b37f;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.contact-form__form button:active {
+  background: #008552;
+}
+
+.contac-form__email {
+  padding-top: 17px;
+  height: 189px;
 }

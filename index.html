@@ -167,49 +167,100 @@
 						</div>
 					</section>
 				</section>
-			</section>	
-			
+			</section>			
 		</section>
+		<!-- About me section -->
 		<section id="about-me">
 			<div class="about-me__text">
 				<h2 class="about-me__primary-text">About me</h2>
-				<p class="about-me__supporting-text"> I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
+				<p> I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
 				<a class="about-me__link" href="#">Get My Resume</a>
-			  </div>
-			  <ul class="about-me__cards">
+			</div>
+			<ul class="about-me__cards">
 				<li class="about-me__works">
-				  <img class="about-me__icon" src="images/icon-languages.svg" alt="languages icon">
-				  <div class="about-me__languages">Languages</div>
-				  <ul class="about-me__tags">
-					<li class="about-me__tag">JavaScript</li>
-					<li class="about-me__tag">Ruby</li>
-					<li class="about-me__tag">Html</li>
-					<li class="about-me__tag">css</li>
-				  </ul>
+					<img class="about-me__icon" src="images/icon-languages.svg" alt="languages icon">
+					<div class="about-me__languages">Languages</div>
+					<ul class="about-me__tags">
+						<li class="about-me__tag">JavaScript</li>
+						<li class="about-me__tag">Ruby</li>
+						<li class="about-me__tag">Html</li>
+						<li class="about-me__tag">css</li>
+					</ul>
 				</li>      
 				<li class="about-me__works">
-				  <img class="about-me__icon" src="images/frameworks.svg" alt="languages icon">
-				  <div class="about-me__languages">Frameworks</div>
-				  <ul class="about-me__tags">
-					<li class="about-me__tag">Bootstrap</li>
-					<li class="about-me__tag">Ruby on rails</li>
-					<li class="about-me__tag">RSpec</li>
-					<li class="about-me__tag">Capybara</li>
-					<li class="about-me__tag">Selenium</li>
-				  </ul>
+					<img class="about-me__icon" src="images/frameworks.svg" alt="languages icon">
+					<div class="about-me__languages">Frameworks</div>
+					<ul class="about-me__tags">
+						<li class="about-me__tag">Bootstrap</li>
+						<li class="about-me__tag">Ruby on rails</li>
+						<li class="about-me__tag">RSpec</li>
+						<li class="about-me__tag">Capybara</li>
+						<li class="about-me__tag">Selenium</li>
+					</ul>
 				</li>
 				<li class="about-me__works">
-				  <img class="about-me__icon" src="images/skills.svg" alt="languages icon">
-				  <div class="about-me__languages">Skills</div>
-				  <ul class="about-me__tags">
-					<li class="about-me__tag">Codekit</li>
-					<li class="about-me__tag">GitHub</li>
-					<li class="about-me__tag">Codepen</li>
-					<li class="about-me__tag">Gitlab</li>
-					<li class="about-me__tag">Terminal</li>
-				  </ul>
+					<img class="about-me__icon" src="images/skills.svg" alt="languages icon">
+					<div class="about-me__languages">Skills</div>
+					<ul class="about-me__tags">
+						<li class="about-me__tag">Codekit</li>
+						<li class="about-me__tag">GitHub</li>
+						<li class="about-me__tag">Codepen</li>
+						<li class="about-me__tag">Gitlab</li>
+						<li class="about-me__tag">Terminal</li>
+					</ul>
 				</li>
-			  </ul>
+			</ul>
+		</section>
+		<!-- Contact Form Section -->
+		<section id="contact-form">			
+			<form class="contact-form__form" action="https://formspree.io/f/mzbqrajl" method="POST">
+				<div class="contact-form__primary">
+					<h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
+				</div>
+				<label for="name">
+					<input type="text" name="name" id="name" autocomplete="name" placeholder="Full Name" maxlength="30" class="contact-form__input" required>
+				</label>
+				<label for="email">
+					<input type="email" name="email" id="email" autocomplete="email" placeholder="Email address" class="contact-form__input" required>
+				</label>
+				<label for="textarea">
+					<textarea name="message" minlength="10" maxlength="500" placeholder="Enter text here" required></textarea>
+				</label>
+                <center><button type="submit">Get in touch</button></center>			    
+			</form>
+			<div>
+				<ul class="social-icons">
+					<li>
+						<a href="#" target="_blank" class="social-icon" id="Twitter">
+							<img src="images/twitter.svg" alt="Twitter">
+						</a>
+					</li>
+					<li>
+						<a href="www.linkedin.com/ruth-abreu/" target="_blank" class="social-icon" id="LinkedIn">
+							<img src="images/Linkedin.svg" alt="LinkedIn">
+						</a>
+					</li>
+					<li>
+						<a href="https://medium.com/@ruthmeryabreu" target="_blank" class="social-icon" id="YouTube">
+							<img src="images/medium.svg" alt="Medium">
+						</a>
+					</li>
+					<li>
+						<a href="www.github.com/ruthmy17" target="_blank" class="social-icon" id="GitHub">
+							<img src="images/github.svg" alt="GitHub">
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="social-icon" id="AngelList">
+							<img src="images/angellist.svg" alt="AngelList">
+						</a>
+					</li>
+				</ul>				
+			</div>
+			<div class="contac-form__email">
+				<p class="about-me__supporting-text">ruthmy17@gmail.com</p>
+			</div>
+			
 		</section>
 	</main>
 </body>
