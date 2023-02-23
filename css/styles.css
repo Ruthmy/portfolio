@@ -7,10 +7,8 @@
   outline: 1px solid red !important;
 }
 
-
 @media only screen and (max-width: 767px) {
   /* For mobile */
-
 
   /* Header styles */
   .app-bar {
@@ -503,7 +501,7 @@
 }
 
 @media (min-width: 768px) {
-/* Desktop */
+  /* Desktop */
 
   nav.image-container,
   div.image-container {
