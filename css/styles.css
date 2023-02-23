@@ -4,7 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
+  outline: 1px solid red !important;
 }
+
+/* Fonts */
+
+
 
 /* Media queries */
 /*
@@ -21,12 +26,18 @@
 }
 */
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+@media only screen and (max-width: 767px) {
+  /* For mobile */
+
+  /*
+  body {
+    width:100%;
+    height:100vh;
+  }
+  */
 
   /* Header styles */
   .app-bar {
-    position: absolute;
     width: 100%;
     height: 92px;
     left: 0;
@@ -44,6 +55,10 @@
     padding: 54px 32px 0 24px;
     justify-content: space-between;
     align-items: center;
+  }
+
+  nav.desktop-menu {
+    display: none;
   }
 
   .image-container div {
@@ -85,9 +100,13 @@
     background-image: url(../images/mobile-background.svg);
     background-repeat: no-repeat;
     gap: 58px;
-    width: 375px;
+    width: 100%;
     left: 0;
     top: 92px;
+  }
+
+  .headline div {
+    width: 100%;
   }
 
   h1,
@@ -127,21 +146,20 @@
     text-align: center;
   }
 
-  section .social {
+  div .social {
     padding: 0 100px 0 100px;
-    height: 20px;
     flex: none;
     order: 2;
     flex-grow: 0;
   }
 
-  section .social-icons {
+  div .social-icons {
     display: flex;
     justify-content: center;
     list-style: none;
   }
 
-  section .social-icons .social-icon {
+  div .social-icons .social-icon {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -152,20 +170,20 @@
 
   div .action {
     width: 100%;
-    height: 48px;
-    padding: 0 24px 0 24px;
+    height: 5rem;
+    margin: 0;
     display: flex;
     justify-content: center;
   }
 
   .action img {
     width: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   /* My Recent Works Styles */
 
-  .recent-works {
+  #recent-works {
     display: flex;
     flex-direction: column;
     width: 375px;
@@ -177,6 +195,7 @@
 
   .recent-works__text {
     width: 100%;
+    padding: 0 24px;
     align-items: center;
     text-align: center;
   }
@@ -504,5 +523,140 @@
   .contac-form__email {
     padding-top: 17px;
     height: 189px;
+  }
+}
+
+@media (min-width: 768px) {
+/* Desktop */
+
+  /*
+  body {
+    width:100%;
+    height:100vh;
+  }
+  */
+
+  nav.image-container,
+  div.image-container {
+    display: none;
+  }
+
+  .desktop-menu {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .desktop-menu__link {
+    text-decoration: none;
+    color: #344563;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 12px;
+  }
+
+  /* Hero */
+  .headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/header-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right -2rem;
+    background-size: 100%;
+    padding-top: 2rem;
+    width: 100%;
+  }
+
+  .primary {
+    width: 100%;
+    padding: 8rem 10rem 10rem 10rem;
+  }
+
+  .primary > div {
+    margin: 1.5rem;
+  }
+
+  h1,
+  h2 {
+    color: #172b4d;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.37px;
+  }
+
+  #i-am:hover {
+    color: #36b37e;
+  }
+
+  #i-am-a {
+    color: #36b37e;
+  }
+
+  #i-am-a:hover {
+    color: #172b4d;
+  }
+
+  .supporting-text {
+    color: #172b4d;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  div .social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  div .social-icons .social-icon {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  div .action {
+    width: 100%;
+    height: 8rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    padding-top: 5rem;
+  }
+
+  .action img {
+    width: 100%;
+  }
+
+  /* My Recent Works Styles */
+
+  #recent-works {
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recent-works__text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 }
