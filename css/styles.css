@@ -505,7 +505,7 @@
 
   nav.image-container,
   div.image-container,
-  .recent-works__text>img {
+  .recent-works__text > img {
     display: none;
   }
 
@@ -729,7 +729,6 @@
     flex: none;
     order: 2;
     flex-grow: 0;
-    
   }
 
   .recent-works__link {
