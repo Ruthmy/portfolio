@@ -4,7 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
-  outline: 1px solid red !important;
+
+  /* outline: 1px solid red !important;*/
 }
 
 @media only screen and (max-width: 767px) {
@@ -347,6 +348,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 50%;
+    box-shadow: 0px 16px 24px rgba(37, 47, 137, 0.08);
   }
 
   .about-me__languages {
@@ -615,7 +617,7 @@
 
   #recent-works {
     width: 100%;
-    padding: 10rem 8rem;
+    padding: 10rem 8rem 2rem 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -776,16 +778,17 @@
       "about-me__text about-me__text about-me__text"
       "about-me__cards about-me__cards about-me__cards";
     /* padding: 5rem; */
-    padding: 2rem 10rem;
+    padding: 2rem 10rem;    
+    background-image: url(../images/top.svg), url(../images/bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right -3rem, top 14rem left -3rem;
+    background-size: 15rem, 13rem;
   }
 
   .about-me__text {
     grid-area: about-me__text;
     place-self: center;
-    background-image: url(../images/top.svg), url(../images/bottom.svg);
-    background-repeat: no-repeat;
-    background-position: top 0 right 0, bottom 0 left 0;
-    padding: 5rem 5rem;
+    padding: 3rem 5rem;
     text-align: center;
   }
 
@@ -824,57 +827,64 @@
 
   .about-me__cards:is(div) {
     grid-area: about-me__cards;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     gap: 0;
     grid-auto-flow: row;
-    align-self: center;
-    list-style: none;
-
-    /*
-    column-gap: 1rem;
-    row-gap: 1rem;
-    */
   }
 
-   
-/*
+  .about-me__cards:is(ul) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .about-me__works {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 18rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     background-color: #ebf0ee;
     border: 1px solid #d0d9d4;
     border-radius: 8px;
-    
   }
 
   .about-me__icon {
     background-color: white;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 50%;
+    box-shadow: 0px 16px 24px rgba(37, 47, 137, 0.08);
+    align-items: flex-start;
+    margin-bottom: 2rem;
   }
 
   .about-me__languages {
-    margin-top: -80px;
-    margin-bottom: 20px;
+    width: 100%;
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
     color: #344563;
+    text-align: center;
   }
 
   .about-me__tags {
-    list-style: none;
-    margin-top: -90px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    column-gap: 12px;
-    row-gap: 12px;
+    width: 100%;
+    height: 30%;
+    padding: 1rem;    
+    margin-top: -1rem;    
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    list-style: none;
   }
 
   .about-me__tag {
@@ -883,11 +893,10 @@
     line-height: 16px;
     color: #36b37e;
     background-color: white;
-    padding: 12px 12px;
+    padding: 0.5rem;
     border-radius: 8px;
   }
 
-  */
 
 
 
