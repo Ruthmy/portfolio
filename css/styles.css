@@ -420,7 +420,6 @@
     text-align: center;
   }
 
-
   .contact-form__form input {
     margin-bottom: 24px;
   }
@@ -790,7 +789,7 @@
     grid-template-areas:
       "about-me__text about-me__text about-me__text"
       "about-me__cards about-me__cards about-me__cards";
-    padding: 2rem 8rem;    
+    padding: 2rem 8rem;
     background-image: url(../images/top.svg), url(../images/bottom.svg);
     background-repeat: no-repeat;
     background-position: top 0 right -3rem, top 14rem left -3rem;
@@ -1047,7 +1046,7 @@
     order: 0;
     flex-grow: 0;
   }
-  
+
   .linkedin {
     flex: none;
     order: 1;
@@ -1059,7 +1058,7 @@
     order: 2;
     flex-grow: 0;
   }
-  
+
   .twitter {
     flex: none;
     order: 3;
