@@ -413,7 +413,13 @@
     background-image: url(../images/illustration-contact-form.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
   }
+
 
   .contact-form__form input {
     margin-bottom: 24px;
@@ -488,6 +494,7 @@
     padding: 12px;
     gap: 10px;
     margin-top: 24px;
+    align-self: center;
   }
 
   .contact-form__form button:hover {
@@ -925,6 +932,7 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
+    padding-right: 1.5rem;
   }
 
   .contact-form__form {
@@ -1063,5 +1071,4 @@
     order: 4;
     flex-grow: 0;
   }
-
 }
