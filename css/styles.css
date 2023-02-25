@@ -566,6 +566,7 @@
     background-size: contain;
     padding-top: 2rem;
     width: 100%;
+    overflow: hidden;
   }
 
   .primary {
@@ -610,7 +611,6 @@
     font-size: 20px;
     line-height: 32px;
     text-align: center;
-    overflow: hidden;
     animation-duration: 1s;
     animation-name: slidein;
   }
