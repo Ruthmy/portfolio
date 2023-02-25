@@ -667,8 +667,8 @@
     bottom: 0;
     border-radius: 8px;
     background: #ebf0ee;
-    width: 18rem;
-    height: 25rem;
+    width: 100%;
+    height: 100%;
   }
 
   .recent-works__img img {
