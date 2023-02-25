@@ -4,8 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
-  
-  
+
   /*
   outline: 1px solid red !important;
   */
@@ -909,7 +908,11 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
-    padding: 4rem 8rem;
+    padding: 10rem 8rem 18rem 8rem;
+    background-image: url(../images/contact-form-desktop-1.svg), url(../images/contact-form-desktop-2.svg), url(../images/contact-form-desktop-3.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 0, bottom 8rem left 20rem, bottom 0 right 0;
+    background-size: 15rem, 10rem, 15rem;
   }
 
   .contact-form__primary {
