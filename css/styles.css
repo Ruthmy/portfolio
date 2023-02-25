@@ -4,8 +4,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, sans-serif;
-
-  /* outline: 1px solid red !important; */
+  
+  
+  /*
+  outline: 1px solid red !important;
+  */
 }
 
 @media only screen and (max-width: 767px) {
@@ -32,7 +35,8 @@
     align-items: center;
   }
 
-  nav.desktop-menu {
+  nav.desktop-menu,
+  footer {
     display: none;
   }
 
@@ -402,7 +406,7 @@
   }
 
   .contact-form__primary {
-    padding: 0 24px 64px 24px;
+    padding: 2rem 2.5rem 2rem 2.5rem;
   }
 
   .contact-form__form {
@@ -507,7 +511,9 @@
 
   nav.image-container,
   div.image-container,
-  .recent-works__text > img {
+  .recent-works__text > img,
+  div.contact-form__social,
+  div.contac-form__email {
     display: none;
   }
 
@@ -777,7 +783,7 @@
     grid-template-areas:
       "about-me__text about-me__text about-me__text"
       "about-me__cards about-me__cards about-me__cards";
-    padding: 2rem 10rem;    
+    padding: 2rem 8rem;    
     background-image: url(../images/top.svg), url(../images/bottom.svg);
     background-repeat: no-repeat;
     background-position: top 0 right -3rem, top 14rem left -3rem;
@@ -818,9 +824,8 @@
     background-color: #36b37f;
     color: white;
     border-radius: 4px;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 7.5rem;
-    height: 2.5rem;
     bottom: 1rem;
   }
 
@@ -896,4 +901,163 @@
     padding: 0.5rem;
     border-radius: 8px;
   }
+
+  /* Contact Form Styles */
+
+  #contact-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 4rem 8rem;
+  }
+
+  .contact-form__primary {
+    width: 50%;
+  }
+
+  .contact-form__primary > h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .contact-form__form {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form__form input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form__input {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    background: #fff;
+    border: 1px solid #d0d9d4;
+    border-radius: 4px;
+    padding: 0 1rem;
+  }
+
+  #name,
+  #email {
+    border: 1px solid #d0d9d4;
+    height: 3rem;
+  }
+
+  .contact-form__form textarea {
+    width: 100%;
+    height: 6rem;
+    background: transparent;
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    resize: vertical;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 1rem;
+  }
+
+  /* Resizer styles */
+
+  .contact-form__form textarea::-webkit-resizer {
+    background-image: url(../images/Union.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  /* Placeholder text Styles */
+
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  .contact-form__form textarea::placeholder {
+    color: #091e42;
+  }
+
+  /* Microsoft Edge */
+  .contact-form__form textarea::-ms-input-placeholder {
+    color: #091e42;
+  }
+
+  /* Internet Explorer 10-11 */
+  .contact-form__form textarea:-ms-input-placeholder {
+    color: #091e42;
+  }
+
+  .contact-form__form button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #36b37f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem;
+    width: 9rem;
+    bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contact-form__form button:hover {
+    background: #36b37f;
+    box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  }
+
+  .contact-form__form button:active {
+    background: #008552;
+  }
+
+  .contac-form__email {
+    padding-top: 17px;
+    height: 189px;
+  }
+
+  footer {
+    width: 100%;
+    height: 4rem;
+    border-top: 1px solid #dfe1e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .github {
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .linkedin {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .angellist {
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  .twitter {
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+  }
+
+  .medium {
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+  }
+
 }
