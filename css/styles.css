@@ -157,6 +157,7 @@
   .action img {
     width: 100%;
     padding-top: 20px;
+    opacity: 0.5;
   }
 
   /* My Recent Works Styles */
@@ -527,10 +528,11 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 2rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     background-color: transparent;
   }
 
@@ -541,7 +543,16 @@
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
-    padding: 10px 12px;
+    padding: 0.5rem 0.7rem;
+    transition-property: all;
+    transition-duration: 0.7s;
+  }
+
+  .desktop-menu__link:hover {
+    background-color: #36b37f;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin: 0.8rem;
   }
 
   /* Hero */
@@ -555,6 +566,7 @@
     background-size: contain;
     padding-top: 2rem;
     width: 100%;
+    overflow: hidden;
   }
 
   .primary {
@@ -588,12 +600,31 @@
     color: #172b4d;
   }
 
+  #i-am span:hover {
+    color: #3b4043;
+  }
+
   .supporting-text {
+    height: 7rem;
     color: #172b4d;
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
     text-align: center;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
 
   div .social-icons {
@@ -609,6 +640,10 @@
     padding: 0 10px 0 10px;
     width: 100%;
     height: 100%;
+  }
+
+  div .social-icons .social-icon:hover {
+    scale: 1.13;
   }
 
   div .action {
@@ -642,6 +677,13 @@
     text-align: center;
   }
 
+  .recent-works__text:hover {
+    background-image: url(../images/green-line.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+  }
+
   .recent-works__cards {
     display: flex;
     flex: none;
@@ -663,6 +705,15 @@
     height: 25rem;
     border-radius: 8px;
     border: 1px solid #d0d9d4;
+    transition: all;
+    transition-duration: 0.7s;
+  }
+
+  .recent-works__card:hover {
+    scale: 1.1;
+    padding: 0.5rem;
+    margin: 0.8rem;
+    box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
 
   .recent-works__img {
@@ -772,6 +823,7 @@
 
   .recent-works__link:hover {
     color: #ebf0ee;
+    box-shadow: 0 0.3rem 0.3rem rgba(54, 179, 127, 0.24);
   }
 
   .recent-works__link:active {
@@ -811,6 +863,13 @@
     padding: 2rem 0;
   }
 
+  .about-me__primary-text:hover {
+    background-image: url(../images/green-line.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom 1.5rem;
+  }
+
   .about-me__text p {
     text-align: center;
     font-weight: 400;
@@ -833,6 +892,14 @@
     padding: 1rem;
     width: 7.5rem;
     bottom: 1rem;
+  }
+
+  .about-me__link:hover {
+    box-shadow: 0 0.3rem 0.3rem rgba(54, 179, 127, 0.24);
+  }
+
+  .about-me__link:active {
+    background: #008552;
   }
 
   .about-me__cards:is(div) {
@@ -863,6 +930,10 @@
     background-color: #ebf0ee;
     border: 1px solid #d0d9d4;
     border-radius: 8px;
+  }
+
+  .about-me__works:hover {
+    box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
 
   .about-me__icon {
@@ -906,6 +977,13 @@
     background-color: white;
     padding: 0.5rem;
     border-radius: 8px;
+    transition: all;
+    transition-duration: 0.3s;
+  }
+
+  .about-me__tag:hover {
+    margin: 0 0.5rem 0 0.5rem;
+    box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
 
   /* Contact Form Styles */
@@ -1018,8 +1096,7 @@
   }
 
   .contact-form__form button:hover {
-    background: #36b37f;
-    box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+    box-shadow: 0 0.3rem 0.3rem rgba(54, 179, 127, 0.24);
   }
 
   .contact-form__form button:active {
