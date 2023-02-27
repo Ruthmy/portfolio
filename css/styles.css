@@ -12,7 +12,6 @@
 
 /* For mobile */
 @media only screen and (max-width: 767px) {
-
   /* Header styles */
   .app-bar {
     width: 100%;
@@ -514,7 +513,6 @@
 
 /* Desktop */
 @media (min-width: 768px) {
-
   nav.image-container,
   div.image-container,
   .recent-works__text > img,
