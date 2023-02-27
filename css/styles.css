@@ -10,8 +10,8 @@
   */
 }
 
+/* For mobile */
 @media only screen and (max-width: 767px) {
-  /* For mobile */
 
   /* Header styles */
   .app-bar {
@@ -512,8 +512,8 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 768px) {
-  /* Desktop */
 
   nav.image-container,
   div.image-container,
@@ -571,11 +571,11 @@
 
   .primary {
     width: 100%;
-    padding: 12rem 15rem 18rem 15rem;
+    padding: 12vw 18vw 18vw 18vw;
   }
 
   .primary > div {
-    margin: 1.5rem;
+    margin: 1.5vw;
   }
 
   h1,
@@ -631,13 +631,14 @@
     display: flex;
     justify-content: center;
     list-style: none;
+    padding: 2vh 0 0 0;
   }
 
   div .social-icons .social-icon {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 0 10px 0 10px;
+    padding: 0 0.5rem 0 0.5rem;
     width: 100%;
     height: 100%;
   }
@@ -653,7 +654,7 @@
     display: flex;
     justify-content: center;
     align-self: flex-end;
-    padding-top: 7rem;
+    padding-top: 8vw;
   }
 
   .action img {
@@ -711,7 +712,6 @@
 
   .recent-works__card:hover {
     scale: 1.1;
-    padding: 0.5rem;
     margin: 0.8rem;
     box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
@@ -1075,6 +1075,11 @@
   /* Internet Explorer 10-11 */
   .contact-form__form textarea:-ms-input-placeholder {
     color: #091e42;
+  }
+
+  .contact-form__form input:hover,
+  .contact-form__form textarea:hover {
+    box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
 
   .contact-form__form button {
