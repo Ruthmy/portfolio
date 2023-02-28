@@ -72,6 +72,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://ruthmy.github.io/portfolio/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -82,9 +88,6 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<ul>
-    <li><p>You need to be part of Microverse</p></li>
-</ul>
 <ul>
     <li><p>A browser that supports html5</p></li>
 </ul>
@@ -101,7 +104,7 @@ Clone this repository to your desired folder:
 </ul>
 <p>or you can</p>
 <ul>
-    <li><p>Open your terminal and clone the repo with this command "cd my-folder git clone git@github.com:myaccount/my-project.git"</p></li>
+    <li><p>Open your terminal and clone the repo with this command `cd my-folder git clone git@github.com:myaccount/my-project.git`</p></li>
 </ul>
 
 ### Install
@@ -145,9 +148,10 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 Upcoming improvements:
-- Contact form.
-- Desktop version.
 - Accessibility improvements.
+- Modal/Pop up windows for the cards details.
+- Javascript to make page interactive.
+- Validate contact form and preserve data in the browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
