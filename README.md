@@ -73,7 +73,9 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+<br>
 
+[![Project presentation: video demo](https://cdn.loom.com/sessions/thumbnails/71fa9c1ba37b4a5395abf07a83a27183-with-play.gif)](https://www.loom.com/share/71fa9c1ba37b4a5395abf07a83a27183)
 - [Live Demo Link](https://ruthmy.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
