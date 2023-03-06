@@ -33,7 +33,6 @@
     align-items: center;
   }
 
-  nav.desktop-menu,
   footer {
     display: none;
   }
@@ -508,6 +507,15 @@
   .contac-form__email {
     padding-top: 17px;
     height: 189px;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+  .allViewHeight {
+    height: 100vh;
   }
 }
 
@@ -1151,3 +1159,4 @@
     flex-grow: 0;
   }
 }
+
