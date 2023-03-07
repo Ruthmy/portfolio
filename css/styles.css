@@ -551,6 +551,7 @@
     height: 100vh;
     background-color: white;
     z-index: 1;
+    border-radius: 0 0 25px 25px;
   }
   
   .desktop-menu.showMobil > ul {
