@@ -66,6 +66,13 @@
     right: 24px;
     top: calc(50% - 40px / 2);
     z-index: 2;
+    background-image: url("../images/Hamburguer-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #hamburger.showMobil {
+    background-image: url("../images/cross.svg");
   }
 
   /* Headline styles */
@@ -565,6 +572,11 @@
   .recent-works__text > img,
   div.contact-form__social,
   div.contac-form__email {
+    display: none;
+  }
+
+
+  #hamburger {
     display: none;
   }
 
