@@ -78,7 +78,7 @@ openModal.addEventListener('click', ()=> {
     //Overlay will be inside the section
     section.appendChild(overlay);
 
-    
+
     ///////Listener fo the close button ///////////////////
     const closeButton = document.querySelector('.modal__close-button');
     closeButton.addEventListener('click', ()=>{
