@@ -5,9 +5,9 @@
   box-sizing: border-box;
   font-family: Inter, sans-serif;
 
-  /*
+  
   outline: 1px solid red !important;
-  */
+  
 }
 
 html {
@@ -94,17 +94,28 @@ footer {
   top: 92px;
 }
 
-.headline div {
+.headline > div {
   width: 100%;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: #172b4d;
+  font-style: normal;
   font-weight: 700;
+}
+
+h1,
+h2 {  
   font-size: 40px;
   line-height: 52px;
   text-align: center;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 44px;
 }
 
 p {
@@ -313,6 +324,7 @@ div .action {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #fff;
+  border: none;
 }
 
 .recent-works__link:hover {
@@ -886,6 +898,7 @@ div .action {
     width: 7.5rem;
     height: 2.5rem;
     bottom: 1rem;
+    border: none;
   }
 
   .recent-works__link:hover {
@@ -1010,7 +1023,7 @@ div .action {
     box-shadow: 0 0.5rem 2rem rgba(37, 47, 137, 0.08);
     align-items: flex-start;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
 
   .about-me__languages {
@@ -1030,7 +1043,7 @@ div .action {
     width: 100%;
     height: 30%;
     padding: 1rem;
-    margin-top: -1rem;
+    margin-top: -3rem;
     column-gap: 0.5rem;
     row-gap: 0.5rem;
     list-style: none;
@@ -1218,5 +1231,188 @@ div .action {
     flex: none;
     order: 4;
     flex-grow: 0;
+  }
+
+  .modal {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 100ms ease-in-out;
+    border: 1px solid #ebf0ee;
+    box-shadow: 0px 2rem 2rem rgba(37, 47, 137, 0.08);
+    border-radius: 8px;
+    z-index: 10;
+    background-color: white;
+    width: 45rem;
+    max-width: 80%;
+    /*height: 40rem;
+    max-height: 95%;*/
+    justify-content: center;
+    padding: 0.5rem 1rem 1rem 1rem;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-window {
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .modal-header > div {
+    padding-left: 96%;
+  }
+
+  .modal__close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #ebecf0;
+    font-size: 1.25rem;
+    color: #67798e;
+    border-radius: 8px;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .modal img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #cfe1e6;
+    padding-top: 0.5rem;
+  }
+
+  .modal.body {
+    display: flex;
+    margin: 0;
+  }
+
+  .modal-title {
+    display: flex;
+    flex: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  .modal-title h3 {
+    display: flex;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 60%;
+    text-align: left;
+  }
+
+  .link1 {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .link2 {
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+
+  .modal__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: baseline;
+    justify-content: space-between;
+    width: 30%; 
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #36b37f;
+    border-radius: 8px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 8rem;
+    height: 2.5rem;
+    bottom: 1rem;
+  }
+
+  .modal__link:hover {
+    color: #ebf0ee;
+    box-shadow: 0 0.3rem 0.3rem rgba(54, 179, 127, 0.24);
+  }
+
+  a .modal-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .modal__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0.7rem 0;
+    gap: 0.4rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .modal__tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    background: #ebf0ee;
+    border-radius: 4px;
+    height: 32px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    font-style: normal; /* text style */
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #344563;
+    ;
+  }
+
+  p:is(.modal-text) {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #344563;
+  }
+
+  .overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 100ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(193, 199, 208, .5);
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
   }
 }

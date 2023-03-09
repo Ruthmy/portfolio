@@ -1,3 +1,4 @@
+// Code for Mobile Menu
 const hamburger = document.querySelector('#hamburger');
 const menu = document.querySelector('.desktop-menu');
 const arrAncherTag = document.querySelectorAll('.desktop-menu__link');
