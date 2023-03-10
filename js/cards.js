@@ -1,7 +1,7 @@
 // RENDER CARDS DYNAMICALLY
 
 //Create an array to store the information on the index cards
-const indexCards = [
+const indexCardsArray = [
     {
         image: '../images/snapshoot-portfolio.png',
         imagesrc: '../images/img-plaholder.png',
@@ -97,8 +97,48 @@ const section = document.querySelector('.recent-works__cards');
 const card = document.createElement('section');
 card.className = 'recent-works__card';
 
+//This variable is for the cards, I'm put one by one in here and then it will be sent.
+let insideCard = ``;
+
+indexCardsArray.forEach(function(singleCardContent) {
+    //This line let me see that I'm actually get it the array and let me see each of the object rendered in the console.
+    //console.log(singleCardContent);
+  
+    //Here, I put teh cards one by one in the previous empty insideCard variable.
+    insideCard = insideCard +
+        `
+        <div class="recent-works__img">
+            <img src="${singleCardContent.imagesrc}" alt="${singleCardContent.imagealt}">
+            <div div class="recent-works__info">
+                <h3 class="recent-works__title">${singleCardContent.title}</h3>
+                <ul class="recent-works__tags">
+                    <li class="recent-works__tag">${singleCardContent.languages[0]}</li>
+                    <li class="recent-works__tag">${singleCardContent.languages[1]}</li>
+                    <li class="recent-works__tag">${singleCardContent.languages[2]}</li>
+                    <li class="recent-works__tag">${singleCardContent.languages[3]}</li>
+                </ul>
+                <button class="recent-works__link" href="#">See Project</button>
+            </div>
+        </div>  
+    `;
+    // uncomment the line below to see the output in the browser console.
+    console.log(insideCard);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Now create, I need to add it to the DOM
-// card will be inside the main
+// card will be inside the section variable
 section.appendChild(card);
 
 // Create the HTML syntaxis for the card
@@ -118,9 +158,15 @@ card.innerHTML = `
         </div>    
 `;
 
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------
+
 /////////////This section is to open the modal when the user click on the See Project button\\\\\\\\\\\\\\\\
-
-
 const openModal = document.querySelector('.recent-works__link');
 openModal.addEventListener('click', () => {
   // Here is the code to created the modal
