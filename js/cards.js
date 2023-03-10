@@ -6,7 +6,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 1'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -16,7 +16,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 2'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -26,7 +26,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 3'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -36,7 +36,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 4'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -46,7 +46,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 5'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -56,7 +56,7 @@ const indexCardsArray = [
     image: '../images/snapshoot-portfolio.png',
     imagesrc: '../images/img-plaholder.png',
     imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components'],
+    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 6'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     live: 'https://ruthmy.github.io/portfolio/',
@@ -98,7 +98,7 @@ indexCardsArray.forEach((singleCardContents) => {
         </section>
         `;
   // uncomment the line below to see the output in the browser console.
-  // console.log(insideCard);
+  console.log(insideCard);
 });
 
 // Here I get the father element by the class name
@@ -111,8 +111,12 @@ section.innerHTML = insideCard;
 //--------------------------------------------------------------------------------------------------
 
 /// //////This section is to open the modal when the user click on the See Project button\\\\\\\\\\\
-const openModal = document.querySelector('.recent-works__link');
-openModal.addEventListener('click', () => {
+
+const openModal = document.querySelectorAll('.recent-works__link');
+for (let i = 0; i < 6; i++) {
+  
+
+openModal[i].addEventListener('click', () => {
   // Here is the code to created the modal
   // First goes the overlay
   const overlay = document.createElement('div');
@@ -129,7 +133,7 @@ openModal.addEventListener('click', () => {
             </div>
             <div class="modal-body">
                 <div class="modal-title">
-                    <h3>Keeping track of hundreds of components</h3>
+                    <h3>${indexCardsArray[i].title[1]}</h3>
                     <a class="modal__link link1" href="#">
                         <span>See Live</span>
                         <img src="images/see-live-icon.svg" alt="" class="modal-icon">
@@ -165,3 +169,7 @@ openModal.addEventListener('click', () => {
     body.removeChild(overlay);
   });
 });
+}
+
+let array = [1, 2, 3];
+array[1].lskdjfañlskdj;

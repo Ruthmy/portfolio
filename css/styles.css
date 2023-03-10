@@ -592,22 +592,23 @@ div .action {
 /* Modal styles */
 
 .modal {
+  
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   transition: 100ms ease-in-out;
   border: 1px solid #ebf0ee;
   box-shadow: 0 2rem 2rem rgba(37, 47, 137, 0.08);
   border-radius: 8px;
   background-color: white;
-  width: 95%;
-  height: 95%;
+  width: 343px;
+  height: 100%;
   justify-content: center;
   padding: 0.5rem 1rem 1rem 1rem;
   overflow: scroll;
   overflow-x: hidden;
-  scale: 0.9;
+  /* scale: 0.9; */
 }
 
 /* Scroll Render */
@@ -1425,23 +1426,23 @@ p:is(.modal-text) {
 
   .modal {
     position: fixed;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     transition: 100ms ease-in-out;
     border: 1px solid #ebf0ee;
     box-shadow: 0 2rem 2rem rgba(37, 47, 137, 0.08);
     border-radius: 8px;
     background-color: white;
-    width: 45rem;
-    max-width: 80%;
-    height: 60rem;
-    max-height: 95%;
+    width: 920px;
+    /* max-width: 80%; */
+    height: 80%;
+    /* max-height: 95%; */
     justify-content: center;
     padding: 0.5rem 1rem 1rem 1rem;
     overflow: scroll;
     overflow-x: hidden;
-    scale: 0.9;
+    /* scale: 0.9; */
   }
 
   /* Scroll Render */
