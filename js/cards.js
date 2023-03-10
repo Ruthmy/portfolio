@@ -1,18 +1,17 @@
-//RENDER CARDS DYNAMICALLY
+// RENDER CARDS DYNAMICALLY
 
-//Get the father element by the class name
+// Get the father element by the class name
 const section = document.querySelector('.recent-works__cards');
 
-
-//Create the principal tag for cards
-const card = document.createElement('section')
+// Create the principal tag for cards
+const card = document.createElement('section');
 card.className = 'recent-works__card';
 
-//Now create, I need to add it to the DOM
-//card will be inside the main
+// Now create, I need to add it to the DOM
+// card will be inside the main
 section.appendChild(card);
 
-//Create the HTML syntaxis for the card
+// Create the HTML syntaxis for the card
 card.innerHTML = `    
         <div class="recent-works__img">
             <img src="/images/img-plaholder.png" alt="Project">
@@ -29,21 +28,18 @@ card.innerHTML = `
         </div>    
 `;
 
-
-
-//This section is to open the modal when the user click on the See Project button
+// This section is to open the modal when the user click on the See Project button
 const openModal = document.querySelector('.recent-works__link');
-openModal.addEventListener('click', ()=> {
-    
-    //Here is the code to created the modal
-    //First goes the overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    //Then comes the actual modal
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    //Create the HTML syntaxis for the modal
-    modal.innerHTML = `
+openModal.addEventListener('click', () => {
+  // Here is the code to created the modal
+  // First goes the overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  // Then comes the actual modal
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  // Create the HTML syntaxis for the modal
+  modal.innerHTML = `
         <div class="modal-window">
             <div class="modal-header">
                 <div><button class="modal__close-button">&times;</button></div>
@@ -73,28 +69,18 @@ openModal.addEventListener('click', ()=> {
         <div id="overlay"></div>        
     `;
 
-    //Modal will be inside the overlay
-    overlay.appendChild(modal);
-    //Overlay will be inside the section
-    section.appendChild(overlay);
+  // Modal will be inside the overlay
+  overlay.appendChild(modal);
+  // Overlay will be inside the section
+  section.appendChild(overlay);
 
-
-    ///////Listener fo the close button ///////////////////
-    const closeButton = document.querySelector('.modal__close-button');
-    closeButton.addEventListener('click', ()=>{
-
-    //Modal will be inside the overlay
+  /// ////Listener fo the close button ///////////////////
+  const closeButton = document.querySelector('.modal__close-button');
+  closeButton.addEventListener('click', () => {
+    // Modal will be inside the overlay
     overlay.removeChild(modal);
 
-    //Overlay will be inside the section
+    // Overlay will be inside the section
     section.removeChild(overlay);
-    })
-
-
-})
-
-
-
-
-
-
+  });
+});
