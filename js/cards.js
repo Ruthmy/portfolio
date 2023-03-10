@@ -1,7 +1,11 @@
 // RENDER CARDS DYNAMICALLY
 
+
+// Get the father element by the class name
+const body = document.querySelector('body');
 // Get the father element by the class name
 const section = document.querySelector('.recent-works__cards');
+
 
 // Create the principal tag for cards
 const card = document.createElement('section');
@@ -65,14 +69,13 @@ openModal.addEventListener('click', () => {
                     <li class="modal__tag">html</li>
                 </ul>
                 <p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
-        </div>
-        <div id="overlay"></div>        
+        </div>     
     `;
 
   // Modal will be inside the overlay
   overlay.appendChild(modal);
   // Overlay will be inside the section
-  section.appendChild(overlay);
+  body.appendChild(overlay);
 
   /// ////Listener fo the close button ///////////////////
   const closeButton = document.querySelector('.modal__close-button');
@@ -81,6 +84,6 @@ openModal.addEventListener('click', () => {
     overlay.removeChild(modal);
 
     // Overlay will be inside the section
-    section.removeChild(overlay);
+    body.removeChild(overlay);
   });
 });

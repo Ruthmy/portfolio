@@ -1242,7 +1242,6 @@ div .action {
     border: 1px solid #ebf0ee;
     box-shadow: 0 2rem 2rem rgba(37, 47, 137, 0.08);
     border-radius: 8px;
-    z-index: 10;
     background-color: white;
     width: 45rem;
     max-width: 80%;
@@ -1412,16 +1411,14 @@ div .action {
     color: #344563;
   }
 
-  #overlay {
+  .overlay {
     position: fixed;
-    opacity: 0;
-    transition: 100ms ease-in-out;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(193, 199, 208, 0.5);
-    pointer-events: none;
+    background-color: rgba(193, 199, 208, 0.8);
+    pointer-events: all;
     width: 100vw;
     height: 100vh;
   }
