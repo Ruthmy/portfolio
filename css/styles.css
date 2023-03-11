@@ -602,8 +602,8 @@ div .action {
   box-shadow: 0 2rem 2rem rgba(37, 47, 137, 0.08);
   border-radius: 8px;
   background-color: white;
-  width: 343px;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   justify-content: center;
   padding: 0.5rem 1rem 1rem 1rem;
   overflow: scroll;
@@ -636,6 +636,12 @@ div .action {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-image: url(../images/snapshoot-portfolio-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  height: 15rem;
+  width: 100%;
 }
 
 .modal-header > div {
@@ -646,7 +652,6 @@ div .action {
   cursor: pointer;
   border: none;
   outline: none;
-  background: #ebecf0;
   font-size: 1.25rem;
   color: #67798e;
   border-radius: 8px;
@@ -666,12 +671,19 @@ div .action {
   margin: 0;
 }
 
-.modal-title {
+.modal-title,
+#modal-header-img,
+ul:is(.modal__tags) {
+  display: none;
+}
+
+.modal-title-mobile {
   display: flex;
   flex: none;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .modal-title h3 {
@@ -700,7 +712,7 @@ div .action {
   flex-direction: row;
   align-items: center;
   align-content: baseline;
-  justify-content: space-between;
+  justify-content: center;
   text-decoration: none;
   font-style: normal;
   font-weight: 600;
@@ -715,6 +727,7 @@ div .action {
   width: 8rem;
   height: 2.5rem;
   bottom: 1rem;
+  margin-right: 1rem;
 }
 
 .modal__link:hover {
@@ -729,7 +742,7 @@ a .modal-icon {
   justify-content: baseline;
 }
 
-.modal__tags {
+.modal__tags-mobile {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -766,6 +779,7 @@ p:is(.modal-text) {
   font-size: 16px;
   line-height: 30px;
   color: #344563;
+  padding: 0.2rem 0 0.2rem 0;
 }
 
 .overlay {
@@ -1161,7 +1175,7 @@ p:is(.modal-text) {
     color: white;
     border-radius: 4px;
     padding: 1rem;
-    width: 7.5rem;
+    width: 10rem;
     bottom: 1rem;
   }
 
@@ -1470,17 +1484,18 @@ p:is(.modal-text) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-image: none;
+    height: auto;
   }
 
   .modal-header > div {
-    padding-left: 96%;
+    padding-left: 97%;
   }
 
   .modal__close-button {
     cursor: pointer;
     border: none;
     outline: none;
-    background: #ebecf0;
     font-size: 1.25rem;
     color: #67798e;
     border-radius: 8px;
@@ -1498,6 +1513,28 @@ p:is(.modal-text) {
   .modal.body {
     display: flex;
     margin: 0;
+  }
+
+  .modal-title-mobile,
+  .modal__tags-mobile {
+    display: none;
+  }
+
+  #modal-header-img {
+    display: initial;
+  }
+
+  ul:is(.modal__tags) {
+    display: contents;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0.7rem 0;
+    gap: 0.4rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
   }
 
   .modal-title {
@@ -1534,7 +1571,7 @@ p:is(.modal-text) {
     flex-direction: row;
     align-items: center;
     align-content: baseline;
-    justify-content: space-between;
+    justify-content: center;
     text-decoration: none;
     font-style: normal;
     font-weight: 600;
@@ -1549,6 +1586,8 @@ p:is(.modal-text) {
     width: 8rem;
     height: 2.5rem;
     bottom: 1rem;
+    margin-right: 0;
+    margin-left: 1rem;
   }
 
   .modal__link:hover {
@@ -1600,6 +1639,7 @@ p:is(.modal-text) {
     font-size: 16px;
     line-height: 30px;
     color: #344563;
+    padding: 0.2rem 0 2rem 0;
   }
 
   .overlay {

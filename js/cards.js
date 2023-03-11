@@ -114,62 +114,75 @@ section.innerHTML = insideCard;
 
 const openModal = document.querySelectorAll('.recent-works__link');
 for (let i = 0; i < 6; i++) {
-  
+  openModal[i].addEventListener('click', () => {
+    // Here is the code to created the modal
+    // First goes the overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    // Then comes the actual modal
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    // Create the HTML syntaxis for the modal
+    modal.innerHTML = `
+          <div class="modal-window">
+              <div class="modal-header">
+                  <div><button class="modal__close-button">&times;</button></div>
+                  <img src="${indexCardsArray[i].image}" alt="Project" id="modal-header-img">
+              </div>
+              <div class="modal-body">
+                  <div class="modal-title">
+                      <h3>${indexCardsArray[i].title[1]}</h3>
+                      <a class="modal__link link1" href="${indexCardsArray[i].live}">
+                          <span>See Live</span>
+                          <img src="images/see-live-icon.svg" alt="" class="modal-icon">
+                      </a>
+                      <a class="modal__link link2" href="${indexCardsArray[i].github}">
+                          <span>See Source</span>
+                          <img src="images/see-source-icon.svg" alt="" class="modal-icon">
+                      </a>
+                  </div>                    
+              </div>
+                  <h3 class="modal-title-mobile">${indexCardsArray[i].title[1]}</h3>
+                  <ul class="modal__tags">
+                      <li class="modal__tag">${indexCardsArray[i].languages[4]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[5]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[6]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[7]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[8]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[9]}</li>
+                  </ul>
+                  <ul class="modal__tags-mobile">
+                      <li class="modal__tag">${indexCardsArray[i].languages[0]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[1]}</li>
+                      <li class="modal__tag">${indexCardsArray[i].languages[2]}</li>
+                  </ul>
+                  <p class="modal-text">${indexCardsArray[i].description}</p>
+                  <div class="modal-title-mobile">
+                      <a class="modal__link link1" href="${indexCardsArray[i].live}">
+                          <span>See Live</span>
+                          <img src="images/see-live-icon.svg" alt="" class="modal-icon">
+                      </a>
+                      <a class="modal__link link2" href="${indexCardsArray[i].github}">
+                          <span>See Source</span>
+                          <img src="images/see-source-icon.svg" alt="" class="modal-icon">
+                      </a>
+                  </div> 
+          </div>     
+      `;
 
-openModal[i].addEventListener('click', () => {
-  // Here is the code to created the modal
-  // First goes the overlay
-  const overlay = document.createElement('div');
-  overlay.className = 'overlay';
-  // Then comes the actual modal
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  // Create the HTML syntaxis for the modal
-  modal.innerHTML = `
-        <div class="modal-window">
-            <div class="modal-header">
-                <div><button class="modal__close-button">&times;</button></div>
-                <img src="/images/snapshoot-portfolio.png" alt="Project">
-            </div>
-            <div class="modal-body">
-                <div class="modal-title">
-                    <h3>${indexCardsArray[i].title[1]}</h3>
-                    <a class="modal__link link1" href="#">
-                        <span>See Live</span>
-                        <img src="images/see-live-icon.svg" alt="" class="modal-icon">
-                    </a>
-                    <a class="modal__link link2" href="#">
-                        <span>See Source</span>
-                        <img src="images/see-source-icon.svg" alt="" class="modal-icon">
-                    </a>
-                </div>                    
-            </div>
-                <ul class="modal__tags">
-                    <li class="modal__tag">Ruby on rails</li>
-                    <li class="modal__tag">css</li>
-                    <li class="modal__tag">JavaScript</li>
-                    <li class="modal__tag">html</li>
-                </ul>
-                <p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea</p>
-        </div>     
-    `;
-
-  // Modal will be inside the overlay
-  overlay.appendChild(modal);
-  // Overlay will be inside the section
-  body.appendChild(overlay);
-
-  /// ////Listener fo the close button ///////////////////
-  const closeButton = document.querySelector('.modal__close-button');
-  closeButton.addEventListener('click', () => {
     // Modal will be inside the overlay
-    overlay.removeChild(modal);
-
+    overlay.appendChild(modal);
     // Overlay will be inside the section
-    body.removeChild(overlay);
-  });
-});
-}
+    body.appendChild(overlay);
 
-let array = [1, 2, 3];
-array[1].lskdjfañlskdj;
+    /// ////Listener fo the close button ///////////////////
+    const closeButton = document.querySelector('.modal__close-button');
+    closeButton.addEventListener('click', () => {
+      // Modal will be inside the overlay
+      overlay.removeChild(modal);
+
+      // Overlay will be inside the section
+      body.removeChild(overlay);
+    });
+  });
+}
