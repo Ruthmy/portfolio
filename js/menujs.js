@@ -1,6 +1,7 @@
+// Code for Mobile Menu
 const hamburger = document.querySelector('#hamburger');
-const menu = document.querySelector('.desktop-menu');
-const arrAncherTag = document.querySelectorAll('.desktop-menu__link');
+const menu = document.querySelector('.menu');
+const arrAncherTag = document.querySelectorAll('.menu__link');
 const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 hamburger.addEventListener('click', (event) => {
@@ -8,8 +9,6 @@ hamburger.addEventListener('click', (event) => {
   menu.classList.toggle('showMobil');
   hamburger.classList.toggle('showMobil');
 });
-
-console.log(arrAncherTag);
 
 arrAncherTag.forEach((a) => {
   a.addEventListener('click', (event) => {
