@@ -636,24 +636,23 @@ div .action {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url(../images/snapshoot-portfolio-mobile.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: center / contain no-repeat url(../images/snapshoot-portfolio-mobile.png);
   border-radius: 8px;
   height: 15rem;
   width: 100%;
 }
 
 .modal-header > div {
-  padding-left: 96%;
+  padding: 0 0 60% 85%;  
 }
 
 .modal__close-button {
   cursor: pointer;
   border: none;
   outline: none;
-  font-size: 1.25rem;
-  color: #67798e;
+  background-color: transparent;
+  font-size: 2rem;
+  color: white;
   border-radius: 8px;
   width: 1.5rem;
   height: 1.5rem;
@@ -1489,13 +1488,14 @@ p:is(.modal-text) {
   }
 
   .modal-header > div {
-    padding-left: 97%;
+    padding: 0 0 0 97%;
   }
 
   .modal__close-button {
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: #ebecf0;
     font-size: 1.25rem;
     color: #67798e;
     border-radius: 8px;
