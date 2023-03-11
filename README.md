@@ -143,6 +143,21 @@ You can deploy this project using:
 - Twitter: [@rury_exe](https://twitter.com/rury_exe)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ruth-abreu)
 
+**Colaborators:**
+
+👤 **Dani Morillo**
+
+- GitHub: [@danifromecuador](https://github.com/danifromecuador)
+- Twitter: [@danifromecuador](https://twitter.com/danifromecuador)
+- LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador/)
+
+👤 **Alejandro Salazar Castro**
+
+- GitHub: [@githubhandle](https://github.com/xandro2021)
+- Twitter: [@twitterhandle](https://twitter.com/xandro2021)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-salazar-ba0ba7255/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
