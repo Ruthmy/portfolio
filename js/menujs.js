@@ -10,8 +10,6 @@ hamburger.addEventListener('click', (event) => {
   hamburger.classList.toggle('showMobil');
 });
 
-// console.log(arrAncherTag);
-
 arrAncherTag.forEach((a) => {
   a.addEventListener('click', (event) => {
     event.stopPropagation();

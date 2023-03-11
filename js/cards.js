@@ -73,9 +73,6 @@ const body = document.querySelector('body');
 let insideCard = '';
 
 indexCardsArray.forEach((singleCardContents) => {
-  // This line let me see that I'm actually get it the array
-  // and let me see each of the object rendered in the console.
-  // console.log(singleCardContent);
 
   // Here, I put teh cards one by one in the previous empty insideCard variable.
   // This way I create the hole HTML syntax for the Recent Works section
@@ -97,8 +94,6 @@ indexCardsArray.forEach((singleCardContents) => {
             </div>
         </section>
         `;
-  // uncomment the line below to see the output in the browser console.
-  // console.log(insideCard);
 });
 
 // Here I get the father element by the class name
