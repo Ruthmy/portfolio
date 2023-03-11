@@ -73,7 +73,6 @@ const body = document.querySelector('body');
 let insideCard = '';
 
 indexCardsArray.forEach((singleCardContents) => {
-
   // Here, I put teh cards one by one in the previous empty insideCard variable.
   // This way I create the hole HTML syntax for the Recent Works section
   insideCard
