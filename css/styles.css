@@ -1555,6 +1555,7 @@ p:is(.modal-text) {
     flex-grow: 0;
     width: 60%;
     text-align: left;
+    margin-right: 2.5rem;
   }
 
   .link1 {
