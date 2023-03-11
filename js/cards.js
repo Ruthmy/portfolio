@@ -98,7 +98,7 @@ indexCardsArray.forEach((singleCardContents) => {
         </section>
         `;
   // uncomment the line below to see the output in the browser console.
-  console.log(insideCard);
+  // console.log(insideCard);
 });
 
 // Here I get the father element by the class name
@@ -113,7 +113,7 @@ section.innerHTML = insideCard;
 /// //////This section is to open the modal when the user click on the See Project button\\\\\\\\\\\
 
 const openModal = document.querySelectorAll('.recent-works__link');
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 6; i += 1) {
   openModal[i].addEventListener('click', () => {
     // Here is the code to created the modal
     // First goes the overlay
