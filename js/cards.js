@@ -3,8 +3,8 @@
 // Create an array to store the information on the index cards
 const indexCardsArray = [
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 1'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -13,8 +13,8 @@ const indexCardsArray = [
     github: 'https://github.com/ruthmy',
   },
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 2'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -23,8 +23,8 @@ const indexCardsArray = [
     github: 'https://github.com/ruthmy',
   },
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 3'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -33,8 +33,8 @@ const indexCardsArray = [
     github: 'https://github.com/ruthmy',
   },
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 4'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -43,8 +43,8 @@ const indexCardsArray = [
     github: 'https://github.com/ruthmy',
   },
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 5'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -53,8 +53,8 @@ const indexCardsArray = [
     github: 'https://github.com/ruthmy',
   },
   {
-    image: '../images/snapshoot-portfolio.png',
-    imagesrc: '../images/img-plaholder.png',
+    image: 'images/snapshoot-portfolio.png',
+    imagesrc: 'images/img-plaholder.png',
     imagealt: '',
     title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 6'],
     languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
