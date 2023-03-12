@@ -426,7 +426,7 @@ div .action {
   text-decoration: none;
 }
 
-/* Contact Form Styles */
+/* Contact Form Styles for mobile */
 
 #contact-form {
   display: flex;
@@ -541,6 +541,14 @@ div .action {
   padding-top: 17px;
   height: 189px;
 }
+
+#error {
+  font-style: normal;
+  font-weight: 600;
+  color: #ff6163;
+  padding-top: 3rem;
+  align-self: flex-end;
+  }
 
 .allViewHeight {
   height: 100vh;
@@ -1270,7 +1278,7 @@ p:is(.modal-text) {
     box-shadow: 0 0.3rem 1rem rgba(54, 179, 127, 0.2);
   }
 
-  /* Contact Form Styles */
+  /* Contact Form Styles for desktop */
 
   #contact-form {
     display: flex;
@@ -1395,6 +1403,14 @@ p:is(.modal-text) {
   .contac-form__email {
     padding-top: 17px;
     height: 189px;
+  }
+
+ #error {
+  font-style: normal;
+  font-weight: 600;
+  color: #ff6163;
+  padding-top: 3rem;
+  align-self: flex-end;
   }
 
   footer {
