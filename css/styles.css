@@ -548,7 +548,7 @@ div .action {
   color: #ff6163;
   padding-top: 3rem;
   align-self: flex-end;
-  }
+}
 
 .allViewHeight {
   height: 100vh;
@@ -1405,12 +1405,12 @@ p:is(.modal-text) {
     height: 189px;
   }
 
- #error {
-  font-style: normal;
-  font-weight: 600;
-  color: #ff6163;
-  padding-top: 3rem;
-  align-self: flex-end;
+  #error {
+    font-style: normal;
+    font-weight: 600;
+    color: #ff6163;
+    padding-top: 3rem;
+    align-self: flex-end;
   }
 
   footer {

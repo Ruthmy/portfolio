@@ -6,21 +6,18 @@ const form = document.getElementById('form');
 const email = document.getElementById('email');
 const errorElement = document.getElementById('error');
 
-
 form.addEventListener('submit', (event) => {
-    let messages = []
-    if (email.value.toLowerCase() !== email.value) {
-        messages.push('Please enter your email address in lowercase letters.')
-    }
+  const messages = [];
+  if (email.value.toLowerCase() !== email.value) {
+    messages.push('Please enter your email address in lowercase letters.');
+  }
 
-    if (messages.length > 0) {
-        event.preventDefault();
-        errorElement.innerText = messages.join(', ');
-        // Remove the message after 3 seconds
-        setTimeout(() => {
-            errorElement.remove();
-        }, 3000);
-      }
-  });
-
-
+  if (messages.length > 0) {
+    event.preventDefault();
+    errorElement.innerText = messages.join(', ');
+    // Remove the message after 3 seconds
+    setTimeout(() => {
+      errorElement.remove();
+    }, 3000);
+  }
+});
