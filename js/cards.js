@@ -3,14 +3,14 @@
 // Create an array to store the information on the index cards
 const indexCardsArray = [
   {
-    image: 'images/snapshoot-portfolio.png',
-    imagesrc: 'images/img-plaholder.png',
-    imagealt: '',
-    title: ['Multi-Post Stories Gain+Glory', 'Keeping track of hundreds of components 1'],
-    languages: ['Ruby on rails', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    live: 'https://ruthmy.github.io/portfolio/',
-    github: 'https://github.com/ruthmy',
+    image: 'images/todo-3.png',
+    imagesrc: 'images/todo-1.png',
+    imagealt: 'Simple To Do List Application',
+    title: ['Simple To Do List Application', 'Simple To Do List Application to organize your day'],
+    languages: ['html', 'css', 'JavaScript', 'html', 'Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+    description: 'A to-do list app is a great tool to help you stay organized and on top of your daily tasks. With a simple to-do list app, you can easily create a list of tasks that you need to complete for the day. ',
+    live: 'https://ruthmy.github.io/TodoList/dist/index.html',
+    github: 'https://github.com/Ruthmy/TodoList',
   },
   {
     image: 'images/snapshoot-portfolio.png',
@@ -86,7 +86,6 @@ indexCardsArray.forEach((singleCardContents) => {
                         <li class="recent-works__tag">${singleCardContents.languages[0]}</li>
                         <li class="recent-works__tag">${singleCardContents.languages[1]}</li>
                         <li class="recent-works__tag">${singleCardContents.languages[2]}</li>
-                        <li class="recent-works__tag">${singleCardContents.languages[3]}</li>
                     </ul>
                     <button class="recent-works__link" href="#">See Project</button>
                 </div>

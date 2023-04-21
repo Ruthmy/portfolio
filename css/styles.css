@@ -1,16 +1,19 @@
 /* General Styles */
-* {
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Inter, sans-serif;
-
-  /*
-  outline: 1px solid red !important;
-  */
+  
+  /* outline: 1px solid red !important; */
 }
 
 html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -644,7 +647,7 @@ div .action {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: center / contain no-repeat url(../images/snapshoot-portfolio-mobile.png);
+  background: center / contain no-repeat url(../images/todo-3.png);
   border-radius: 8px;
   height: 15rem;
   width: 100%;
