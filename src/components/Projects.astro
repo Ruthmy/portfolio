@@ -1,0 +1,16 @@
+---
+import json from "../js/info.json";
+import Code from "./icons/Code.astro";
+---
+
+{
+  json.projects! && Object.keys(json.projects).length > 0 && (
+    <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-white">
+      <Code class="size-7" />
+      Projects
+    </h2>
+
+
+
+  )
+}
