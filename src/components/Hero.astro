@@ -1,0 +1,76 @@
+---
+import json from "../js/info.json";
+import Badge from "./Badge.astro";
+import SocialProfile from "./SocialProfile.astro";
+
+// Icons
+import GitHub from "./icons/GitHub.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import Twitter from "./icons/Twitter.astro";
+import AngelList from "./icons/AngelList.astro";
+import Medium from "./icons/Medium.astro";
+---
+
+<!-- Title -->
+<img
+  class="rounded-full size-12 mb-4"
+  src={json.site.avatar}
+  alt={json.site.name}
+/>
+
+<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+
+  &lt; {json.hero.title} /&gt;
+  <a
+    href={json.social.LinkedIn}
+    target="_blank"
+    rel="noopener"
+    class="flex justify-center items-center"
+  >
+    <!-- ternary operator to show the badge isAvailable -->
+    {
+      json.site.isAvailable! && json.site.isAvailable ? (
+        <Badge color="bg-blue-600 dark:bg-blue-900 dark:text-blue-300">
+          Available for hire
+        </Badge>
+      ) : (
+        <Badge color="bg-red-600 dark:bg-red-900 dark:text-red-300">
+          Not available for hire
+        </Badge>
+      )
+    }
+  </a>
+</h1>
+
+<!-- Description -->
+<h2 class="text-xl lg:text-2xl opacity-80 text-wrap text-white">
+  {json.hero.description}
+</h2>
+
+<!-- Social Media -->
+{
+  json.social! && Object.keys(json.social).length > 0 && (
+    <nav class="flex gap-3 lg:gap-4 mt-8 text-white flex-wrap">
+      <SocialProfile href={json.social.GitHub}>
+        <GitHub class="size-4 md:size-5 opacity-90" />
+        GitHub
+      </SocialProfile>
+      <SocialProfile href={json.social.LinkedIn}>
+        <LinkedIn class="size-4 md:size-5 opacity-90" />
+        LinkedIn
+      </SocialProfile>
+      <SocialProfile href={json.social.AngelList}>
+        <AngelList class="size-4 md:size-5 opacity-90" />
+        AngelList
+      </SocialProfile>
+      <SocialProfile href={json.social.Twitter}>
+        <Twitter class="size-4 md:size-5 opacity-90" />
+        Twitter
+      </SocialProfile>
+      <SocialProfile href={json.social.Medium}>
+        <Medium class="size-4 md:size-5 opacity-90" />
+        Medium
+      </SocialProfile>
+    </nav>
+  )
+}
