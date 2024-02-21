@@ -45,15 +45,10 @@
       "externalImage": "Project External Image",
       "liveVersionLink": "Project Live Version Link",
       "sourceLink": "Project Source Link",
-      "languages": [
-        "Project Language 1",
-        "Project Language 2",
-        "Project Language 3"
-      ],
-      "frameworks": [
-        "Project Framework 1",
-        "Project Framework 2",
-        "Project Framework 3"
+      "tags": [
+        "Framework 1",
+        "Framework 2",
+        "Framework 3"
       ]
     }
   ],
