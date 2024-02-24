@@ -1,27 +1,34 @@
 ---
 import json from "../js/info.json";
 import Code from "./icons/Code.astro";
+
+// Tech Icons
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import React from "./icons/React.astro"
 
 type TechType = {
   [key: string]: {
     name: string;
     class: string;
-    icon: any;
+    icon?: any;
   };
 };
 
 const techs: TechType = {
+  React: {
+    name: "React",
+    class: "bg-[#61DAFB]/40 text-white",
+    icon: React,
+  },
   Next: {
     name: "Next.js",
     class: "bg-black text-white",
     icon: NextJS,
   },
-  Tailwind: {
-    name: "Tailwind CSS",
+  WordPress: {
+    name: "WordPress",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
   },
 };
 
