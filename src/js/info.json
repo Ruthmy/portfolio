@@ -41,7 +41,7 @@
     {
       "name": "Project Name",
       "description": "Project Description",
-      "externalImage": "https://porfolio.dev/projects/svgl.webp",
+      "image": "https://porfolio.dev/projects/svgl.webp",
       "liveVersionLink": "Project Live Version Link",
       "sourceLink": "Project Source Link",
       "tags": [
@@ -53,7 +53,7 @@
     {
       "name": "Project Name 2",
       "description": "Project Description",
-      "externalImage": "https://porfolio.dev/projects/svgl.webp",
+      "image": "https://porfolio.dev/projects/svgl.webp",
       "liveVersionLink": "Project Live Version Link",
       "sourceLink": "Project Source Link",
       "tags": [
