@@ -56,9 +56,10 @@
       "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
       "sourceLink": "Project Source Link",
       "tags": [
+        "Tailwind",
         "React",
         "Redux",
-        "Ruby on Rails",
+        "Rails",
         "PostgreSQL"
       ]
     }
