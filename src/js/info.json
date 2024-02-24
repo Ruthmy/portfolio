@@ -41,12 +41,23 @@
     {
       "name": "Project Name",
       "description": "Project Description",
-      "internalImage": "Project Internal Image",
-      "externalImage": "Project External Image",
+      "externalImage": "https://porfolio.dev/projects/svgl.webp",
       "liveVersionLink": "Project Live Version Link",
       "sourceLink": "Project Source Link",
       "tags": [
-        "Framework 1",
+        "Tailwind",
+        "Framework 2",
+        "Framework 3"
+      ]
+    },
+    {
+      "name": "Project Name 2",
+      "description": "Project Description",
+      "externalImage": "https://porfolio.dev/projects/svgl.webp",
+      "liveVersionLink": "Project Live Version Link",
+      "sourceLink": "Project Source Link",
+      "tags": [
+        "Tailwind",
         "Framework 2",
         "Framework 3"
       ]
