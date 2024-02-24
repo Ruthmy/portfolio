@@ -51,7 +51,7 @@
     },
     {
       "name": "Rent for a day",
-      "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application, and it allows users to register and log in with their credentials, see all the items registered, and add or delete items to the inventory.",
+      "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application.",
       "image": "https://porfolio.dev/projects/svgl.webp",
       "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
       "sourceLink": "Project Source Link",
