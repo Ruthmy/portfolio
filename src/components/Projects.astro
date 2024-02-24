@@ -8,6 +8,7 @@ import Tailwind from "./icons/Tailwind.astro"
 import React from "./icons/React.astro"
 import Redux from "./icons/Redux.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
+import Rails from "./icons/Rails.astro"
 
 type TechType = {
   [key: string]: {
@@ -32,6 +33,11 @@ const techs: TechType = {
     name: "PostgreSQL",
     class: "bg-[#336791]/20 text-white",
     icon: PostgreSQL,
+  },
+  Rails: {
+    name: "Ruby on Rails",
+    class: "bg-[#CC0000]/10 text-white",
+    icon: Rails,
   },
   Tailwind: {
     name: "Tailwind CSS",
