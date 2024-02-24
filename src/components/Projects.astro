@@ -80,34 +80,40 @@ const techs: TechType = {
       </h2>
 
       {json.projects.map((project) => (
-        <article class="mt-8">
-          <h3 class="text-2xl font-semibold">{project.name}</h3>
-          <p class="text-lg mb-4 text-pretty">{project.description}</p>
-          <ul class="flex gap-x-2 flew-row mb-4">
-            {project.tags.map((tag) => {
-              const IconComponent = techs[tag]?.icon;
+        <article class="flex flex-col pb-8 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+          
+          <div class="w-full md:w-1/2">
+            <img
+              src={project.image}
+              alt={project.name}
+              class="rounded shadow-2xl shadow-white/10"
+            />
+          </div>
 
-              return techs[tag] ? (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class}`}
-                  >
-                    {IconComponent && <IconComponent class="size-4" />}
-                    {techs[tag].name}
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-semibold">{project.name}</h3>
+            <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            <ul class="flex gap-2 flew-row mb-4 flex-wrap">
+              {project.tags.map((tag) => {
+                const IconComponent = techs[tag]?.icon;
+
+                return techs[tag] ? (
+                  <li>
+                    <span
+                      class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class}`}
+                    >
+                      {IconComponent && <IconComponent class="size-4" />}
+                      {techs[tag].name}
+                    </span>
+                  </li>
+                ) : (
+                  <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 bg-black text-white">
+                    <li>{tag}</li>
                   </span>
-                </li>
-              ) : (
-                <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 bg-black text-white">
-                  <li>{tag}</li>
-                </span>
-              );
-            })}
-          </ul>
-          <img
-            src={project.image}
-            alt={project.name}
-            class="rounded shadow-2xl shadow-white/10"
-          />
+                );
+              })}
+            </ul>
+          </div>
         </article>
       ))}
     </a>
