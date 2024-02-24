@@ -7,7 +7,7 @@
   "hero": {
     "title": "Hey, I'm Ruth.",
     "subtitle": "I'm a software developer",
-    "description": "I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me."
+    "description": "I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me."
   },
   "about": {
     "title": "About Title",
@@ -39,27 +39,27 @@
   ],
   "projects": [
     {
-      "name": "Project Name",
-      "description": "Project Description",
+      "name": "MindFit",
+      "description": "An all-rounded digital platform that offers solutions for mental wellness, personal, professional, and leadership development.",
       "image": "https://porfolio.dev/projects/svgl.webp",
-      "liveVersionLink": "Project Live Version Link",
-      "sourceLink": "Project Source Link",
+      "liveVersionLink": "https://mindfitglobal.com/",
       "tags": [
-        "Tailwind",
-        "Framework 2",
-        "Framework 3"
+        "WordPress",
+        "Elementor",
+        "Illustrator"
       ]
     },
     {
-      "name": "Project Name 2",
-      "description": "Project Description",
+      "name": "Rent for a day",
+      "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application, and it allows users to register and log in with their credentials, see all the items registered, and add or delete items to the inventory.",
       "image": "https://porfolio.dev/projects/svgl.webp",
-      "liveVersionLink": "Project Live Version Link",
+      "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
       "sourceLink": "Project Source Link",
       "tags": [
-        "Tailwind",
-        "Framework 2",
-        "Framework 3"
+        "React",
+        "Redux",
+        "Ruby on Rails",
+        "PostgreSQL"
       ]
     }
   ],
