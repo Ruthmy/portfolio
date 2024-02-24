@@ -1,6 +1,30 @@
 ---
 import json from "../js/info.json";
 import Code from "./icons/Code.astro";
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+
+type TechType = {
+  [key: string]: {
+    name: string;
+    class: string;
+    icon: any;
+  };
+};
+
+const techs: TechType = {
+  Next: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  Tailwind: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+
 ---
 
 {
@@ -12,33 +36,62 @@ import Code from "./icons/Code.astro";
       </h2>
 
       {json.projects.map((project) => (
-        <div class="flex flex-col gap-y-16">
-          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img
-                src={project.externalImage}
-                alt={project.name}
-                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              />
-            </div>
-            <div class="w-full md:w-1/2 md:max-w-lg">
-              <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                {project.name}
-              </h3>
-              <div class="flex flex-wrap mt-2">
-                <ul class="flex flex-row mb-2 gap-x-2">
-                  {project.tags.map((tag) => (
-                    <li>{tag}</li>
-                  ))}
-                </ul>
-                <div class="mt-2 text-gray-700 dark:text-gray-400">
-                  {project.description}
-                </div>
+        
+        <article class="mt-8">
+          <h3 class="text-2xl font-semibold">{project.name}</h3>
+          <p class="text-lg mb-4 text-pretty">{project.description}</p>
+          <ul class="flex gap-x-2 flew-row mb-4">
+            {project.tags.map((tag) => (
+              techs[tag] ? (
+                <li>
+                  <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class}`}>
+                    {techs[tag].icon && (
+                      <techs[tag].icon class="size-4" />
+                    )}
+                    {techs[tag].name}
+                  </span>
+                </li>
+              ) : (
+              <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 bg-black text-white">
+                <li>{tag}</li>
+              </span>
+              )
+            ))}
+          </ul>
+          <img
+            src={project.image}
+            alt={project.name}
+            class="rounded shadow-2xl shadow-white/10"
+          />
+        </article>
+
+        // <div class="flex flex-col gap-y-16">
+        //   <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        //     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+        //       <img
+        //         src={project.externalImage}
+        //         alt={project.name}
+        //         class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+        //       />
+        //     </div>
+        //     <div class="w-full md:w-1/2 md:max-w-lg">
+        //       <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+        //         {project.name}
+        //       </h3>
+        //       <div class="flex flex-wrap mt-2">
+        //         <ul class="flex flex-row mb-2 gap-x-2">
+        //           {project.tags.map((tag) => (
+        //             <li>{tag}</li>
+        //           ))}
+        //         </ul>
+        //         <div class="mt-2 text-gray-700 dark:text-gray-400">
+        //           {project.description}
+        //         </div>
                 
-              </div>
-            </div>
-          </article>
-        </div>
+        //       </div>
+        //     </div>
+        //   </article>
+        // </div>
       ))}
     </a>
   )
