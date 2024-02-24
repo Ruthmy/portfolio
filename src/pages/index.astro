@@ -9,6 +9,7 @@ import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -24,7 +25,10 @@ import Contact from "../components/Contact.astro";
       <About />
     </SectionContainer>
 
-    <SectionContainer id="work-experience" class="pb-24 pt-24 lg:py-24 lg:pb-32 ">
+    <SectionContainer
+      id="work-experience"
+      class="pb-24 pt-20 lg:py-24 lg:pb-32"
+    >
       <Experience />
     </SectionContainer>
 
@@ -32,9 +36,11 @@ import Contact from "../components/Contact.astro";
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="contact-form" class="pb-20">
+    <SectionContainer id="contact-form" class="py-10">
       <Contact />
     </SectionContainer>
+
+    <Footer />
   </main>
 </Layout>
 
