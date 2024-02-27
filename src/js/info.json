@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Ruth Abreu",
-    "avatar": "me.png",
+    "avatar": "me.webp",
     "isAvailable": true
   },
   "hero": {
@@ -41,7 +41,7 @@
     {
       "name": "MindFit",
       "description": "An all-rounded digital platform that offers solutions for mental wellness, personal, professional, and leadership development.",
-      "image": "https://porfolio.dev/projects/svgl.webp",
+      "image": "/projects/mindfit.webp",
       "liveVersionLink": "https://mindfitglobal.com/",
       "tags": [
         "WordPress",
@@ -52,11 +52,10 @@
     {
       "name": "Rent for a day",
       "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application.",
-      "image": "https://porfolio.dev/projects/svgl.webp",
+      "image": "/projects/rent-for-a-day.webp",
       "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
       "sourceLink": "Project Source Link",
       "tags": [
-        "Tailwind",
         "React",
         "Redux",
         "Rails",
