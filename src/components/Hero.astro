@@ -4,12 +4,12 @@ import BadgeAvailable from "./BadgeAvailable.astro";
 import SocialProfile from "./SocialProfile.astro";
 
 // Icons
+import AngelList from "./icons/AngelList.astro";
 import GitHub from "./icons/GitHub.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
-import Twitter from "./icons/Twitter.astro";
-import AngelList from "./icons/AngelList.astro";
-import Medium from "./icons/Medium.astro";
 import MailIcon from "./icons/Mail.astro";
+import Medium from "./icons/Medium.astro";
+import Twitter from "./icons/Twitter.astro";
 ---
 
 <!-- Title -->
@@ -26,7 +26,7 @@ import MailIcon from "./icons/Mail.astro";
     href={json.social.LinkedIn}
     target="_blank"
     rel="noopener"
-    class="flex justify-center items-center"
+    class="flex justify-center items-center hover:scale-105 transition"
   >
     <!-- ternary operator to show the badge isAvailable -->
     {
