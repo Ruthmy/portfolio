@@ -4,41 +4,35 @@ import ProfileCheck from "./icons/ProfileCheck.astro";
 const personalImageAlt = "Ruth Abreu";
 ---
 
-<!-- About me section -->
-
-<!--para el dark mode 
+<!-- About me section --><!--para el dark mode 
   text-gray-700 dark:text-gray-300
  text-black/80 dark:text-white
 -->
-
-<h2
-  class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white"
->
-
-<h2
-  class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white"
->
-  <ProfileCheck class="size-8" />
-  About me
-</h2>
-
-<article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
->
-  <div class="[&>p]:mb-4 text-pretty order-2 md:order-1">
-    <p>
-      Hi! I'm Ruth, I studied Computer Science and, after years of working as a computer scientist, a pandemic and a new PC, I switched to the world of remote work. Since then, I enjoy creating web experiences, designs and various digital products.
-    </p>
-    <p>
-      I have more than 4 years of experience in different areas of technology, such as software development, technical support, website development, graphic design and content creation; so I adapt very well to changes and new challenges.
-    </p>
-  </div>
-  <img
-    width="200"
-    height="200"
-    src={json.site.avatar}
-    alt={personalImageAlt}
-    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
-    style="object-position: 50% 50%"
-  />
-</article>
+{
+  json.about && Object.keys(json.about).length > 0 && (
+    <>
+      <h2 class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white">
+        <ProfileCheck class="size-8" />
+        About me
+      </h2>
+      <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+        <div class="[&>p]:mb-4 text-pretty order-2 md:order-1">
+          <p>
+            {json.about["1paragraph"]}
+          </p>
+          <p>
+            {json.about["2paragraph"]}
+          </p>
+        </div>
+        <img
+          width="200"
+          height="200"
+          src={json.site.avatar}
+          alt={personalImageAlt}
+          class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+          style="object-position: 50% 50%"
+        />
+      </article>
+    </>
+  )
+}
