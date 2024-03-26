@@ -53,7 +53,7 @@
       "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application.",
       "image": "/projects/rent-for-a-day.webp",
       "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
-      "sourceLink": "Project Source Link",
+      "sourceLink": "https://github.com/Ruthmy/rentforaday-front",
       "tags": [
         "React",
         "Redux",
