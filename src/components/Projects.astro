@@ -76,51 +76,75 @@ const techs: TechType = {
 
 {
   json.projects! && Object.keys(json.projects).length > 0 && (
-    <a>
-      <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-white">
-        <Code class="size-7" />
-        Projects
-      </h2>
+    <>
+      <a>
+        <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-white">
+          <Code class="size-7" />
+          Projects
+        </h2>
+      </a>
+      <div class="flex flex-col gap-y-16">
+        {json.projects.map((project) => (
+          <article class="flex flex-col pb-8 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            </div>
 
-      {json.projects.map((project) => (
-        <article class="flex flex-col pb-8 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-          
-          <div class="w-full md:w-1/2">
-            <img
-              src={project.image}
-              alt={project.name}
-              class="rounded shadow-2xl shadow-primary-600/10"
-            />
-          </div>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-2xl font-semibold">{project.name}</h3>
 
-          <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-semibold">{project.name}</h3>
-            <p class="text-lg mb-4 text-pretty">{project.description}</p>
-            
-            <ul class="flex gap-2 flew-row mb-4 flex-wrap">
-              {project.tags.map((tag) => {
-                const IconComponent = techs[tag]?.icon;
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                <p class="text-lg mb-4 text-pretty">{project.description}</p>
+              </div>
 
-                return techs[tag] ? (
-                  <li>
-                    <span
-                      class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class} hover:brightness-125 transition-colors`}
-                    >
-                      {IconComponent && <IconComponent class="size-4" />}
-                      {techs[tag].name}
-                    </span>
-                  </li>
-                ) : (
-                  <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 bg-black text-white">
-                    <li>{tag}</li>
-                  </span>
-                );
-              })}
-            </ul>
-            
-          </div>
-        </article>
-      ))}
-    </a>
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex gap-2 flew-row mb-4 flex-wrap">
+                  {project.tags.map((tag) => {
+                    const IconComponent = techs[tag]?.icon;
+
+                    return techs[tag] ? (
+                      <li>
+                        <span
+                          class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class} hover:brightness-125 transition-colors`}
+                        >
+                          {IconComponent && <IconComponent class="size-4" />}
+                          {techs[tag].name}
+                        </span>
+                      </li>
+                    ) : (
+                      <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 bg-black text-white">
+                        <li>{tag}</li>
+                      </span>
+                    );
+                  })}
+                </ul>
+
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  {project.liveVersionLink && (
+                    <LinkButton href={`${project.liveVersionLink}`}>
+                      <Link class="size-6" />
+                      Preview
+                    </LinkButton>
+                  )}
+                  {project.sourceLink && (
+                    <LinkButton href={`${project.sourceLink}`}>
+                      <GitHubBorder class="size-6" />
+                      Code
+                    </LinkButton>
+                  )}
+                </footer>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </>
   )
 }
