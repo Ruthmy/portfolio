@@ -10,9 +10,8 @@
     "description": "I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me."
   },
   "about": {
-    "title": "About Title",
-    "subtitle": "About Subtitle",
-    "description": "About Description"
+    "1paragraph": "Hi! I'm Ruth, I studied Computer Science and, after years of working as a computer scientist, a pandemic and a new PC, I switched to the world of remote work. Since then, I enjoy creating web experiences, designs and various digital products.",
+    "2paragraph": "I have more than 4 years of experience in different areas of technology, such as software development, technical support, website development, graphic design and content creation; so I adapt very well to changes and new challenges."
   },
   "languages": [
     "JavaScript",
