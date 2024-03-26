@@ -40,7 +40,7 @@ const techs: TechType = {
   },
   Rails: {
     name: "Ruby on Rails",
-    class: "bg-[#CC0000]/10 text-white",
+    class: "bg-[#CC0000]/20 text-white",
     icon: Rails,
   },
   Tailwind: {
@@ -93,6 +93,7 @@ const techs: TechType = {
           <div class="w-full md:w-1/2 md:max-w-lg">
             <h3 class="text-2xl font-semibold">{project.name}</h3>
             <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            
             <ul class="flex gap-2 flew-row mb-4 flex-wrap">
               {project.tags.map((tag) => {
                 const IconComponent = techs[tag]?.icon;
@@ -100,7 +101,7 @@ const techs: TechType = {
                 return techs[tag] ? (
                   <li>
                     <span
-                      class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class}`}
+                      class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${techs[tag].class} hover:brightness-125 transition-colors`}
                     >
                       {IconComponent && <IconComponent class="size-4" />}
                       {techs[tag].name}
@@ -113,6 +114,7 @@ const techs: TechType = {
                 );
               })}
             </ul>
+            
           </div>
         </article>
       ))}
