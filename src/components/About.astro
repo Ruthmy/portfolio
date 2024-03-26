@@ -1,8 +1,55 @@
 ---
-
+import json from "../js/info.json";
+import ProfileCheck from "./icons/ProfileCheck.astro";
+const personalImageAlt = "Ruth Abreu";
 ---
 
 <!-- About me section -->
-<section id="about-me">
-    
-</section>
+
+<!--para el dark mode 
+  text-gray-700 dark:text-gray-300
+ text-black/80 dark:text-white
+-->
+
+<h2
+  class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white"
+>
+
+<h2
+  class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white"
+>
+  <ProfileCheck class="size-8" />
+  About me
+</h2>
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div class="[&>p]:mb-4 text-pretty order-2 md:order-1">
+    <p>
+      ¡Hola! Soy Ruth, estudié Informática y, tras años ejerciendo la carrera,
+      una pandemia y una PC nueva, me pasé al mundo del trabajo remoto. Desde
+      entonces disfruto creando experiencias web, diseños y diversos productos
+      digitales. Me encanta enfocarme en la parte visual y de rendimiento, para
+      ofrecer la mejor experiencia a los usuarios.
+    </p>
+    <p>
+      Cuento con más de 4 años de experiencia en diferentes áreas de tecnología,
+      como el desarrollo de software, soporte técnico, desarrollo de sitios web,
+      diseño gráfico y creación de contenido; por lo que me adapto muy bien a
+      los cambios y nuevos retos.
+    </p>
+
+    <p></p>
+
+    <p></p>
+  </div>
+  <img
+    width="200"
+    height="200"
+    src={json.site.avatar}
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>
