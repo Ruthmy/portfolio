@@ -1,4 +1,8 @@
 ---
+// Info
+import json from "@/js/info.json";
+
+
 // Layout
 import Layout from "@/layouts/Layout.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
@@ -17,26 +21,26 @@ import Projects from "@/components/Projects.astro";
   description="Hire me to build your next website or web application. I'm a web developer and programmer with experience in HTML, CSS, JavaScript, React, Ruby on Rails, and more."
 >
   <main class="px-4">
-    <SectionContainer class="py-32 pb-12 lg:py-44 lg:pb-24 md:py-44 md:pb-24">
+    <SectionContainer class="pt-32 pb-12 lg:pt-52 lg:pb-40 md:pt-44 md:pb-24">
       <Hero />
     </SectionContainer>
 
     <SectionContainer
       id="work-experience"
-      class="pb-24 pt-20 lg:py-24 lg:pb-32"
+      class="pb-24 pt-20 lg:pt-24 lg:pb-32 obs transition-all ease-in-out delay-100 duration-[1000ms]"
     >
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="recent-works">
+    <SectionContainer id="recent-works" class="obs transition-all ease-in-out delay-100 duration-[1000ms]">
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="about-me" class="py-10">
+    <SectionContainer id="about-me" class="py-10 obs transition-all ease-in-out delay-100 duration-[1000ms]">
       <About />
     </SectionContainer>
 
-    <SectionContainer id="contact-form" class="py-10">
+    <SectionContainer id="contact-form" class="py-10 obs transition-all ease-in-out delay-100 duration-[1000ms]">
       <Contact />
     </SectionContainer>
 
