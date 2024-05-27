@@ -119,9 +119,11 @@ const techs: TechType = {
                         </span>
                       </li>
                     ) : (
-                      <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 dark:bg-black text-white drop-shadow-md dark:drop-shadow-none bg-[#764ABC]/60 dark:bg-[#764ABC]/30 border border-[#764ABC]/40 dark:border-white/10">
-                        <li>{tag}</li>
-                      </span>
+                      <li class="drop-shadow-md dark:drop-shadow-none hover:brightness-110 dark:hover:brightness-125 transition-colors">
+                        <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 drop-shadow-md dark:drop-shadow-none text-white bg-primary-500/60 dark:bg-primary-500/30 border border-primary-500/40 dark:border-white/10">
+                          {tag}
+                        </span>
+                      </li>
                     );
                   })}
                 </ul>
