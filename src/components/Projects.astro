@@ -78,7 +78,7 @@ const techs: TechType = {
   json.projects! && Object.keys(json.projects).length > 0 && (
     <>
       <a>
-        <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-white">
+        <h2 class="text-black/80 dark:text-white text-3xl font-medium mb-6 flex gap-x-3 items-center">
           <Code class="size-7" />
           Projects
         </h2>
@@ -98,7 +98,7 @@ const techs: TechType = {
             </div>
 
             <div class="w-full md:w-1/2 md:max-w-lg">
-              <h3 class="text-2xl font-semibold">{project.name}</h3>
+              <h3 class="text-black/80 dark:text-white text-2xl font-semibold">{project.name}</h3>
 
               <div class="mt-2 text-gray-700 dark:text-gray-400">
                 <p class="text-lg mb-4 text-pretty">{project.description}</p>
