@@ -4,14 +4,10 @@ import ProfileCheck from "./icons/ProfileCheck.astro";
 const personalImageAlt = "Ruth Abreu";
 ---
 
-<!-- About me section --><!--para el dark mode 
-  text-gray-700 dark:text-gray-300
- text-black/80 dark:text-white
--->
 {
   json.about && Object.keys(json.about).length > 0 && (
     <>
-      <h2 class="flex items-center mb-6 text-3xl font-medium gap-x-8 text-white">
+      <h2 class="text-black/80 dark:text-white flex items-center mb-6 text-3xl font-medium gap-x-8">
         <ProfileCheck class="size-8" />
         About me
       </h2>
