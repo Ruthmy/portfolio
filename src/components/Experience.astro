@@ -27,14 +27,14 @@ import Download from "@/components/icons/Download.astro";
               {item.startDate} - {item.endDate}
             </time>
 
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-[#C084FC] tracking-wider mt-2 leading-6">
+            <h3 class="text-lg font-bold dark:font-semibold text-gray-900 dark:text-[#C084FC] tracking-wider mt-2 leading-6">
               {item.title}
-              <Badge color="text-white dark:text-primary-100 bg-primary-600 dark:bg-primary-900 px-1 ml-4">
+              <Badge color="text-white dark:text-primary-100 bg-primary-600 dark:bg-primary-900 px-1 ml-4 drop-shadow-md dark:drop-shadow-none">
                 {item.type}
               </Badge>
             </h3>
 
-            <span class="text-xs font-normal text-gray-600 dark:text-gray-400">
+            <span class="text-xs font-normal text-primary-900 dark:text-gray-400 drop-shadow-md dark:drop-shadow-none">
               {item.company! && item.location! && " at "}
               {item.company! && item.company}
               {item.company! && item.location! && " in "}
@@ -45,9 +45,9 @@ import Download from "@/components/icons/Download.astro";
               ✓ {item.description}
             </p>
 
-            <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400 [&>*:last-child]:after:content-['_'] flex-wrap">
+            <span class="pt-2 inline-flex items-center text-xs font-medium dark:font-normal text-gray-500 dark:text-gray-400 [&>*:last-child]:after:content-['_'] flex-wrap ">
               {item.technologies.map((tech) => (
-                <span class="me-2 after:content-['_•']">{tech}&nbsp;</span>
+                <span class="me-2 after:content-['_•'] hover:text-primary-500">{tech}&nbsp;</span>
               ))}
             </span>
           </li>
