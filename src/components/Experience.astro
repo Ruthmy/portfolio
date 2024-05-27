@@ -11,7 +11,7 @@ import Download from "@/components/icons/Download.astro";
 {
   json.workExperience! && Object.keys(json.workExperience).length > 0 && (
     <>
-      <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-white">
+      <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-black/80 dark:text-white">
         <Briefcase class="size-7" />
         Experience
       </h2>
@@ -41,7 +41,7 @@ import Download from "@/components/icons/Download.astro";
               {item.location! && item.location}
             </span>
 
-            <p class="text-base font-normal text-gray-500 dark:text-gray-100 pt-2 text-pretty">
+            <p class="text-base font-normal text-gray-700 dark:text-gray-100 pt-2 text-pretty">
               ✓ {item.description}
             </p>
 
