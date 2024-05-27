@@ -44,21 +44,21 @@ const { title, description } = Astro.props;
 
     <!-- Fade section Animation -->
     <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-      const observer1 = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100');
-            entry.target.classList.remove('opacity-0');
-          } else {
-            entry.target.classList.add('opacity-0');
-            entry.target.classList.remove('opacity-100');
-          }
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const observer1 = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100");
+              entry.target.classList.remove("opacity-0");
+            } else {
+              entry.target.classList.add("opacity-0");
+              entry.target.classList.remove("opacity-100");
+            }
+          });
         });
+        const hiddenElements = document.querySelectorAll(".obs");
+        hiddenElements.forEach((element) => observer1.observe(element));
       });
-      const hiddenElements = document.querySelectorAll('.obs');
-      hiddenElements.forEach((element) => observer1.observe(element));
-    });
     </script>
     <!-- Fade section Animation -->
   </body>
@@ -88,8 +88,8 @@ const { title, description } = Astro.props;
   }
 
   @media (prefers-color-scheme: dark) {
-        body {
-          color: rgba(255, 255, 255, 0.9);
-        }
-      }
+    body {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
 </style>
