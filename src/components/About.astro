@@ -7,8 +7,8 @@ const personalImageAlt = "Ruth Abreu";
 {
   json.about && Object.keys(json.about).length > 0 && (
     <>
-      <h2 class="text-black/80 dark:text-white flex items-center mb-6 text-3xl font-medium gap-x-8">
-        <ProfileCheck class="size-8" />
+      <h2 class="text-black/80 dark:text-white flex items-center mb-6 text-3xl font-semibold gap-x-8">
+        <ProfileCheck class="size-8 stroke-primary-700 dark:stroke-current" />
         About me
       </h2>
       <article class="order-2 flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
@@ -25,7 +25,7 @@ const personalImageAlt = "Ruth Abreu";
           height="200"
           src={json.site.avatar}
           alt={personalImageAlt}
-          class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+          class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-primary-500/20 dark:bg-yellow-500/5 ring-1 ring-primary-500/70 dark:ring-white/20"
           style="object-position: 50% 50%"
         />
       </article>
