@@ -112,7 +112,7 @@ const techs: TechType = {
                     return techs[tag] ? (
                       <li class="drop-shadow-md dark:drop-shadow-none hover:brightness-110 dark:hover:brightness-125 transition-colors">
                         <span
-                          class={`flex gap-x-2 rounded-full text-xs py-1 px-2 drop-shadow-md dark:drop-shadow-none text-white ${techs[tag].class}`}
+                          class={`flex gap-x-2 rounded-full text-xs py-1 px-2 text-white ${techs[tag].class}`}
                         >
                           {IconComponent && <IconComponent class="size-4" />}
                           {techs[tag].name}
