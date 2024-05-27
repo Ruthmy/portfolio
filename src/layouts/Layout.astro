@@ -3,6 +3,7 @@
 import "@fontsource-variable/montserrat";
 
 import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props {
   title: string;
@@ -23,20 +24,25 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <!-- Background -->
+    <!-- Background start -->
     <div class="fixed left-0 top-0 -z-10 h-full w-full">
-      <div class="relative h-full w-full bg-slate-950">
+      <div class="relative h-full w-full bg-gray-50 dark:bg-slate-950">
         <div
-          class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+          class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full dark:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
         >
         </div><div
-          class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+          class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full dark:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
         >
         </div>
       </div>
     </div>
+    <!-- Background end -->
+
     <Header />
     <slot />
+    <Footer />
+
+    <!-- Fade section Animation -->
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
       const observer1 = new IntersectionObserver((entries) => {
@@ -54,6 +60,7 @@ const { title, description } = Astro.props;
       hiddenElements.forEach((element) => observer1.observe(element));
     });
     </script>
+    <!-- Fade section Animation -->
   </body>
 </html>
 
@@ -71,6 +78,7 @@ const { title, description } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overscroll-behavior: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -78,4 +86,10 @@ const { title, description } = Astro.props;
       scroll-behavior: auto;
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+        body {
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
 </style>
