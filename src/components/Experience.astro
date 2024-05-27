@@ -11,8 +11,8 @@ import Download from "@/components/icons/Download.astro";
 {
   json.workExperience! && Object.keys(json.workExperience).length > 0 && (
     <>
-      <h2 class="text-3xl font-medium mb-6 flex gap-x-3 items-center text-black/80 dark:text-white">
-        <Briefcase class="size-7" />
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white">
+        <Briefcase class="size-7 stroke-primary-700 dark:stroke-current" />
         Experience
       </h2>
 
@@ -21,7 +21,7 @@ import Download from "@/components/icons/Download.astro";
         {json.workExperience.map((item) => (
 
           <li class="mb-10 ms-4 flex-wrap">
-            <div class="absolute w-3 h-3 dark:bg-gray-200 rounded-full mt-1.5 -start-1.5 border dark:border-white border-gray-900 bg-gray-700" />
+            <div class="absolute w-3 h-3 dark:bg-gray-200 rounded-full mt-1.5 -start-1.5 border dark:border-white border-primary-500 bg-primary-500" />
 
             <time class="mb-1 text-sm font-medium leading-none text-gray-400 dark:text-primary-200">
               {item.startDate} - {item.endDate}
