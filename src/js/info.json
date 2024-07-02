@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "Ruth Abreu",
+    "avatar": "me.webp",
+    "isAvailable": true
+  },
+  "hero": {
+    "title": "Hey, I'm Ruth.",
+    "subtitle": "I'm a software developer",
+    "description": "I can help you build a product, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me."
+  },
+  "about": {
+    "1paragraph": "Hi! I'm Ruth, I studied Computer Science and, after years of working as a computer scientist, a pandemic and a new PC, I switched to the world of remote work. Since then, I enjoy creating web experiences, designs and various digital products.",
+    "2paragraph": "I have more than 4 years of experience in different areas of technology, such as software development, technical support, website development, graphic design and content creation; so I adapt very well to changes and new challenges."
+  },
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "Ruby",
+    "SQL",
+    "HTML",
+    "CSS"
+  ],
+  "frameworks": [
+    "Bootstrap",
+    "TailwindCSS",
+    "React",
+    "Redux",
+    "Ruby on Rails",
+    "RSpec",
+    "Capybara",
+    "Jest"
+  ],
+  "skills": [
+    "Skill 1",
+    "Skill 2",
+    "Skill 3"
+  ],
+  "projects": [
+    {
+      "name": "MindFit",
+      "description": "An all-rounded digital platform that offers solutions for mental wellness, personal, professional, and leadership development.",
+      "image": "/projects/mindfit.webp",
+      "liveVersionLink": "https://mindfitglobal.com/",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Illustrator"
+      ]
+    },
+    {
+      "name": "Rent for a day",
+      "description": "A reservation-based application to rent a property/accommodation for a day. This project is both an API built with Ruby on Rails and PostgreSQL, and a React/Redux application.",
+      "image": "/projects/rent-for-a-day.webp",
+      "liveVersionLink": "https://rent-for-a-day-kqic.onrender.com/",
+      "sourceLink": "https://github.com/Ruthmy/rentforaday-front",
+      "tags": [
+        "React",
+        "Redux",
+        "Rails",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "workExperience": [
+    {
+      "startDate": "Feb 2023",
+      "endDate": "Present",
+      "title": "Full Stack Developer",
+      "type": "Remote",
+      "company": "Freelance/Self-employed",
+      "description": "I have designed and developed full-stack web applications with solid databases, functionalities, responsive designs, and best coding practices, following industry standards like version control (GitHub | GitFlow), & TDD (Test Driven Development).",
+      "technologies": [
+        "Front-End Development",
+        "Back-End Web Development",
+        "Agile Methodologies",
+        "Pair Programming"
+      ]
+    },
+    {
+      "startDate": "Feb 2019",
+      "endDate": "Jan 2022",
+      "title": "State Technical Support Coordinator",
+      "type": "On-site",
+      "company": "Mercados de Alimentos C.A.",
+      "location": "Venezuela",
+      "description": "Led technical support and maintenance of computer equipment, servers, and technological infrastructure at the state level, ensuring the operational continuity of 8 establishments with over 200 devices.",
+      "technologies": [
+        "Technical Support",
+        "Server administration",
+        "Technical and administrative consulting"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "name": "Microverse",
+      "degree": "Full Stack Web Developer",
+      "startDate": "Feb 2023",
+      "endDate": "Dec 2023"
+    },
+    {
+      "name": "Universidad Nacional Experimental de los Llanos Centrales 'Rómulo Gallegos'​",
+      "degree": "Ingeniería informática",
+      "startDate": "Otc 2008",
+      "endDate": "Nov 2016"
+    }
+  ],
+  "contact": {
+    "email": "ruthmy17@gmail.com",
+    "phone": "+584124174958"
+  },
+  "social": {
+    "GitHub": "https://www.github.com/Ruthmy",
+    "LinkedIn": "https://www.linkedin.com/in/ruth-abreu/",
+    "AngelList": "https://wellfound.com/u/ruth-abreu",
+    "Twitter": "https://twitter.com/rury_exe",
+    "Medium": "https://medium.com/@ruthmeryabreu"
+  }
+}

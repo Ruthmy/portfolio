@@ -1,0 +1,83 @@
+---
+import json from "../js/info.json";
+import BadgeAvailable from "./BadgeAvailable.astro";
+import SocialProfile from "./SocialProfile.astro";
+
+// Icons
+import AngelList from "./icons/AngelList.astro";
+import GitHub from "./icons/GitHub.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import MailIcon from "./icons/Mail.astro";
+import Medium from "./icons/Medium.astro";
+import Twitter from "./icons/Twitter.astro";
+---
+
+<!-- Title -->
+<img
+  class="rounded-full size-12 mb-4"
+  src={json.site.avatar}
+  alt={json.site.name}
+/>
+
+<h1 class="text-primary-900/90 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+
+  &lt; {json.hero.title} /&gt;
+  <a
+    href={json.social.LinkedIn}
+    target="_blank"
+    rel="noopener"
+    class="flex justify-center items-center hover:scale-105 transition"
+  >
+    <!-- ternary operator to show the badge isAvailable -->
+    {
+      json.site.isAvailable! && json.site.isAvailable ? (
+        <BadgeAvailable>
+          Available for hire
+        </BadgeAvailable>
+      ) : (
+        <BadgeAvailable>
+          Contact me
+        </BadgeAvailable>
+      )
+    }
+  </a>
+</h1>
+
+<!-- Description -->
+<h2 class="text-black/80 dark:text-white font-medium dark:font-normal text-xl lg:text-2xl opacity-80 text-wrap">
+  {json.hero.description}
+</h2>
+
+<!-- Social Media -->
+{
+  json.social! && Object.keys(json.social).length > 0 && (
+    <nav class="flex gap-3 lg:gap-4 mt-8 text-white flex-wrap">
+      <SocialProfile href={`mailto:${json.contact.email}`}>
+      <MailIcon class="size-4" />
+      Contact me
+    </SocialProfile>
+    <SocialProfile href={json.social.LinkedIn}>
+      <LinkedIn class="size-4 md:size-4 opacity-90" />
+      LinkedIn
+    </SocialProfile>
+    <SocialProfile href={json.social.GitHub}>
+      <GitHub class="size-4 md:size-5 opacity-90" />
+      GitHub
+    </SocialProfile>
+    <!--
+    <SocialProfile href={json.social.AngelList}>
+      <AngelList class="size-4 md:size-5 opacity-90" />
+      AngelList
+    </SocialProfile>
+    <SocialProfile href={json.social.Twitter}>
+      <Twitter class="size-4 md:size-5 opacity-90" />
+      Twitter
+    </SocialProfile>
+    <SocialProfile href={json.social.Medium}>
+      <Medium class="size-4 md:size-5 opacity-90" />
+      Medium
+    </SocialProfile>
+    -->
+    </nav>
+  )
+}

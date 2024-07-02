@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b>Portfolio - README</b></h1>
+  <h1><b>Personal Portfolio</b></h1>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -12,7 +12,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -25,14 +25,15 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio] <a name="about-project"></a>
+# ✨ Personal Portfolio <a name="about-project"></a>
 
-**[Portfolio]** is a practice project that seeks to reinforce previously learned theories with practice. It is a simple and visual personal portfolio, which has the Linters for HTML and CSS3 configured along with a couple of .html and .css files.
+The main purpose of this repository is to create a simple, eye-catching and fast website to show the projects I have worked on, and the skills acquired in them as part of my work and practice as a FullStack Developer.
+
+<br>
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -46,19 +47,14 @@
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS3</a></li>
   </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
   <ul>
-    <li><a href="#">No additional server-side technology is implemented.</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
   </ul>
-</details>
-
-<details>
-<summary>Database</summary>
   <ul>
-    <li><a href="#">No additional database technology is implemented.</a></li>
+    <li><a href="https://astro.build/">Astro</a></li>
+  </ul>
+  <ul>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 
@@ -66,19 +62,33 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Lihgthouse]**
-- **[Webhint]**
-- **[Stylelint]**
+<ul>
+  <li>HTML & CSS3</li>
+  <li>Tailwind CSS</li>
+  <li>Astro</li>
+  <li>JavaScript</li>
+  <li>Linters
+    <ul>
+      <li>Lihgthouse</li>
+      <li>Webhint</li>
+      <li>StyleLint</li>
+      <li>ESLint</li>
+    </ul>
+  </li>
+  <li>Follow Microverse's list of best practices for JavaScript projects.</li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- 
 ## 🚀 Live Demo <a name="live-demo"></a>
 <br>
 
-[![Project presentation: video demo](https://cdn.loom.com/sessions/thumbnails/71fa9c1ba37b4a5395abf07a83a27183-with-play.gif)](https://www.loom.com/share/71fa9c1ba37b4a5395abf07a83a27183)
-- [Live Demo Link](https://ruthmy.github.io/portfolio/)
+    [![Project presentation: video demo](https://cdn.loom.com/sessions/thumbnails/eff934abb4734706b04b3651f8e76e87-with-play.gif)](https://www.loom.com/share/eff934abb4734706b04b3651f8e76e87)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
+-->
+
 
 <!-- GETTING STARTED -->
 
@@ -91,45 +101,39 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 <ul>
-    <li><p>A browser that supports html5</p></li>
+    <li><p>A modern browser.</p></li>
 </ul>
 <ul>
-    <li><p>Git and a GitHub account</p></li>
+    <li><p>Git and a GitHub account.</p></li>
 </ul>
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<ul>
-    <li><p>You can just create a Repository from the Template</p></li>
-</ul>
-<p>or you can</p>
-<ul>
-    <li><p>Open your terminal and clone the repo with this command `cd my-folder git clone git@github.com:myaccount/my-project.git`</p></li>
-</ul>
+Clone this repository to your desired folder by using this 👇️ command :
+```
+git clone https://github.com/Ruthmy/portfolio.git
+```
 
 ### Install
 
-Install this project with:
+Install this project and its dependencies with:
 
-<ul>
-    <li><p>You don't need install this project.</p></li>
-</ul>
+```
+ npm install
+```
 
 ### Usage
 
-To open it, make double-click on the HTML file. Run it in your browser.
+```
+ npm run dev
+```
 
-### Run tests
-
-Not applicable.
+Runs the app in the development mode.
+Open http://localhost:4321 to view it in your browser.
 
 ### Deployment
 
-You can deploy this project using:
-
-- [Implementation Link](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/hello_microverse_project.md)
+- Not aplicable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,6 +148,11 @@ You can deploy this project using:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ruth-abreu)
 
 **Colaborators:**
+
+👤 **Gabriel Rozas**
+
+- GitHub: [@EmiLoKiJu](https://github.com/emilokiju)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/grozas/)
 
 👤 **Dani Morillo**
 
@@ -165,10 +174,7 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 Upcoming improvements:
-- Accessibility improvements.
-- Modal/Pop up windows for the cards details.
-- Javascript to make page interactive.
-- Validate contact form and preserve data in the browser.
+- [x] All fulfilled for now.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,7 +184,7 @@ Upcoming improvements:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ruthmy/portfolio/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,6 +193,8 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and know someone who might find it helpful, please share it.
+Or give it a **star** ⭐️
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,7 +202,9 @@ If you like this project and know someone who might find it helpful, please shar
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for pushing me to meet challenges like this.
+I would like to thank all my colleagues who participated in the creation and improvement of this project in each of its phases, contributing ideas, supporting the development, pointing out errors to correct, creating their own contributions... Without you this project would not be the same.
+
+- Original design idea by [Midudev](https://www.porfolio.dev/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +213,8 @@ I would like to thank Microverse for pushing me to meet challenges like this.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Ruthmy/portfolio/blob/a15bde81c6f76367f00c8a710557311818f276b8/LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+

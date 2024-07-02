@@ -1,0 +1,152 @@
+---
+import json from "@/js/info.json";
+import Code from "./icons/Code.astro";
+
+// Tech Icons
+import Elementor from "./icons/Elementor.astro";
+import GitHubBorder from "./icons/GitHubBorder.astro";
+import Illustrator from "./icons/Illustrator.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import NextJS from "./icons/NextJS.astro";
+import PostgreSQL from "./icons/PostgreSQL.astro";
+import Rails from "./icons/Rails.astro";
+import React from "./icons/React.astro";
+import Redux from "./icons/Redux.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import WordPress from "./icons/WordPress.astro";
+
+// Tipado de los iconos
+type TechType = {
+  [key: string]: {
+    name: string;
+    class: string;
+    icon?: any;
+  };
+};
+
+const techs: TechType = {
+  React: {
+    name: "React",
+    class: "bg-[#236791]/40 dark: bg-[#61DAFB]/40 border border-[#61DAFB]/30 dark:border-white/10",
+    icon: React,
+  },
+  Redux: {
+    name: "Redux",
+    class: "bg-[#764ABC]/60 dark:bg-[#764ABC]/30 border border-[#764ABC]/40 dark:border-white/10",
+    icon: Redux,
+  },
+  PostgreSQL: {
+    name: "PostgreSQL",
+    class: "bg-[#336791]/40 dark:bg-[#336791]/20 border border-[#336791]/30 dark:border-white/10",
+    icon: PostgreSQL,
+  },
+  Rails: {
+    name: "Ruby on Rails",
+    class: "bg-[#CC0000]/50 dark:bg-[#CC0000]/20 border border-[#CC0000]/30 dark:border-white/10",
+    icon: Rails,
+  },
+  Tailwind: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] dark:bg-[#003159] border border-[#003159]/20 dark:border-white/10",
+    icon: Tailwind,
+  },
+  Next: {
+    name: "Next.js",
+    class: "bg-black border border-[#000000]/20 dark:border-white/10",
+    icon: NextJS,
+  },
+  WordPress: {
+    name: "WordPress",
+    class: "bg-[#003159]/30 dark:bg-[#003159]/40 border border-[#003159]/20 dark:border-white/10",
+    icon: WordPress,
+  },
+  Elementor: {
+    name: "Elementor",
+    class: "bg-[#92003B]/50 dark:bg-[#92003B]/30 border border-[#92003B]/20 dark:border-white/10",
+    icon: Elementor,
+  },
+  Illustrator: {
+    name: "Adobe Illustrator",
+    class: "bg-[#FF9A00]/60 dark:bg-[#FF9A00]/20 border border-[#FF9A00]/30 dark:border-white/10",
+    icon: Illustrator,
+  },
+};
+---
+
+{
+  json.projects! && Object.keys(json.projects).length > 0 && (
+    <>
+      <a>
+        <h2 class="text-black/80 dark:text-white text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Code class="size-7 stroke-primary-700 dark:stroke-current" />
+          Projects
+        </h2>
+      </a>
+      <div class="flex flex-col gap-y-16">
+        {json.projects.map((project) => (
+          <article class="flex flex-col pb-8 space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+              <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <h3 class="text-black/80 dark:text-white text-2xl font-semibold">{project.name}</h3>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                <p class="text-lg mb-4 text-pretty">{project.description}</p>
+              </div>
+
+              <div class="flex flex-wrap mt-2">
+                <ul class="flex gap-2 flew-row mb-4 flex-wrap">
+                  {project.tags.map((tag) => {
+                    const IconComponent = techs[tag]?.icon;
+
+                    return techs[tag] ? (
+                      <li class="drop-shadow-md dark:drop-shadow-none hover:brightness-110 dark:hover:brightness-125 transition-colors">
+                        <span
+                          class={`flex gap-x-2 rounded-full text-xs py-1 px-2 text-white ${techs[tag].class}`}
+                        >
+                          {IconComponent && <IconComponent class="size-4" />}
+                          {techs[tag].name}
+                        </span>
+                      </li>
+                    ) : (
+                      <li class="drop-shadow-md dark:drop-shadow-none hover:brightness-110 dark:hover:brightness-125 transition-colors">
+                        <span class="flex gap-x-2 rounded-full text-xs py-1 px-3 drop-shadow-md dark:drop-shadow-none text-white bg-primary-500/60 dark:bg-primary-500/30 border border-primary-500/40 dark:border-white/10">
+                          {tag}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                <footer class="flex items-end justify-start mt-4 gap-x-4">
+                  {project.liveVersionLink && (
+                    <LinkButton href={`${project.liveVersionLink}`}>
+                      <Link class="size-6" />
+                      Preview
+                    </LinkButton>
+                  )}
+                  {project.sourceLink && (
+                    <LinkButton href={`${project.sourceLink}`}>
+                      <GitHubBorder class="size-6" />
+                      Code
+                    </LinkButton>
+                  )}
+                </footer>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </>
+  )
+}

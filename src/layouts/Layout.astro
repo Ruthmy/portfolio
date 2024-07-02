@@ -1,0 +1,95 @@
+---
+// Supports weights 100-900
+import "@fontsource-variable/montserrat";
+
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Background start -->
+    <div class="fixed left-0 top-0 -z-10 h-full w-full">
+      <div class="relative h-full w-full bg-gray-50 dark:bg-slate-950">
+        <div
+          class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full dark:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        >
+        </div><div
+          class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full dark:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+        >
+        </div>
+      </div>
+    </div>
+    <!-- Background end -->
+
+    <Header />
+    <slot />
+    <Footer />
+
+    <!-- Fade section Animation -->
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const observer1 = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100");
+              entry.target.classList.remove("opacity-0");
+            } else {
+              entry.target.classList.add("opacity-0");
+              entry.target.classList.remove("opacity-100");
+            }
+          });
+        });
+        const hiddenElements = document.querySelectorAll(".obs");
+        hiddenElements.forEach((element) => observer1.observe(element));
+      });
+    </script>
+    <!-- Fade section Animation -->
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Montserrat Variable", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+</style>

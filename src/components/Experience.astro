@@ -1,0 +1,74 @@
+---
+import json from "@/js/info.json";
+import Badge from "./Badge.astro";
+// import { type WorkExperience } from "@/types/info";
+
+// Icons
+import Briefcase from "@/components/icons/Briefcase.astro";
+import Download from "@/components/icons/Download.astro";
+---
+
+{
+  json.workExperience! && Object.keys(json.workExperience).length > 0 && (
+    <>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white">
+        <Briefcase class="size-7 stroke-primary-700 dark:stroke-current" />
+        Experience
+      </h2>
+
+      <ol class="relative border-s dark:border-gray-200 border-gray-700 ml-3">
+
+        {json.workExperience.map((item) => (
+
+          <li class="mb-10 ms-4 flex-wrap">
+            <div class="absolute w-3 h-3 dark:bg-gray-200 rounded-full mt-1.5 -start-1.5 border dark:border-white border-primary-500 bg-primary-500" />
+
+            <time class="mb-1 text-sm font-medium leading-none text-gray-400 dark:text-primary-200">
+              {item.startDate} - {item.endDate}
+            </time>
+
+            <h3 class="text-lg font-bold dark:font-semibold text-gray-900 dark:text-[#C084FC] tracking-wider mt-2 leading-6">
+              {item.title}
+              <Badge color="text-white dark:text-primary-100 bg-primary-600 dark:bg-primary-900 px-1 ml-4 drop-shadow-md dark:drop-shadow-none">
+                {item.type}
+              </Badge>
+            </h3>
+
+            <span class="text-xs font-normal text-primary-900 dark:text-gray-400 drop-shadow-md dark:drop-shadow-none">
+              {item.company! && item.location! && " at "}
+              {item.company! && item.company}
+              {item.company! && item.location! && " in "}
+              {item.location! && item.location}
+            </span>
+
+            <p class="text-base font-normal text-gray-700 dark:text-gray-100 pt-2 text-pretty">
+              ✓ {item.description}
+            </p>
+
+            <span class="pt-2 inline-flex items-center text-xs font-medium dark:font-normal text-gray-500 dark:text-gray-400 [&>*:last-child]:after:content-['_'] flex-wrap ">
+              {item.technologies.map((tech) => (
+                <span class="me-2 after:content-['_•'] hover:text-primary-500">{tech}&nbsp;</span>
+              ))}
+            </span>
+          </li>
+
+        ))}
+
+      </ol>
+
+      <div class="flex flex-col items-center justify-center mt-10 gap-5">
+        <p class="text-sm font-medium dark:font-normal leading-none text-gray-700 dark:text-gray-300">
+          Want to see the rest?
+        </p>
+        <a
+          href="https://docs.google.com/document/d/1ywegxadh2CwsQ7TTVmfwqj9tszkAUaLw--NJfR9GTBw/edit?usp=sharing"
+          target="_blank"
+          class="inline-flex items-center px-4 py-2 text-sm font-semibold dark:font-medium text-primary-900 bg-gray-100 border border-primary-300 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        >
+          Download CV
+          <Download class="size-5 ms-1 stroke-primary-600 dark:stroke-current" />
+        </a>
+      </div>
+    </>
+  )
+}
